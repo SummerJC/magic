@@ -1,6 +1,5 @@
 <template>  
   
-  </div>
 
 </template>
 
@@ -14,7 +13,7 @@
     name: 'hello1',
     data() {
        return{
-
+       }
       },
     mounted() {
 
