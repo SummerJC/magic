@@ -13,10 +13,16 @@ exports.cssLoaders = function (options) {
   options = options || {}
 
   var cssLoader = {
-    loader: 'css-loader',
+    loader: 'css-loader?importLoaders=1',
     options: {
       minimize: process.env.NODE_ENV === 'production',
       sourceMap: options.sourceMap
+    }
+  }
+ var px2remLoader = {
+    loader: 'px2rem-loader',
+    options: {
+      remUnit: 75
     }
   }
 

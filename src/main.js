@@ -11,7 +11,6 @@ import 'vue-ydui/dist/ydui.rem.css';
 import 'mint-ui/lib/style.css';
   import http from './utils/axios'
   import api from './utils/api'
-Vue.use(YDUI);
 Vue.use(MintUi);
 Vue.use(VueResource)
 Vue.config.productionTip = false
@@ -20,5 +19,7 @@ new Vue({
   el: '#app',
   router,
   template: '<App/>',
-  components: { App }
+  components: { App },
+  mounted(){
+  }
 })

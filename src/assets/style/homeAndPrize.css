@@ -1,0 +1,249 @@
+@charset "utf-8";
+
+ul,li{list-style: none;}
+body{padding: 0;margin: 0;}
+button{	border-style: none;}
+/**/
+.homeConeten {
+	width:100%;
+	height: 100%;
+	overflow: hidden;
+	background-color: #fe5050;
+}
+.homeConeten .mint-swipe{
+	width: 100%;
+	height: 238px;
+}
+.homeConeten .mint-swipe img{
+	width: 100%;
+	height: 100%;
+}
+.homeConeten .twoButton{
+	width: calc(100% - 26px);
+	height: 30px;
+	margin-top: 200px;
+	position: absolute;
+	margin-left:13px;
+}
+.homeConeten .twoButton button{
+	width: calc(50% - 2px);
+	color: #fff;
+	float: left;
+	height: 35px;
+	border-radius: 3px;
+}
+.homeConeten .twoButton button:first-child{
+	background-color: #a046ff;
+	margin-right: 2px;
+}
+.homeConeten .twoButton button:last-child{
+	background-color: #ffb43c;
+	margin-left: 2px;
+}
+.homeConeten .goodsList li{
+	width: calc(50% - 2.5px);
+	float: left;
+	overflow: hidden;
+	height: auto;
+	background:#fff;
+	margin-top: 5px;
+}
+.homeConeten .goodsList li img{
+	width: 100%;
+	height: 150px;
+}
+.homeConeten .goodsList li:nth-child(even){
+	margin-left: 2.5px;
+}
+.homeConeten .goodsList li:nth-child(odd){
+	margin-right: 2.5px;
+}
+.homeConeten .goodsList .content{
+	background: #fff;
+	font-size: 13px;
+	text-indent: 10px;
+	line-height: 25px;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	padding: 5px 0px;
+}
+.homeConeten .goodsList .content p:nth-child(1){
+	width: 100%;
+	text-overflow: ellipsis;
+	white-space:nowrap; 
+	overflow: hidden;
+
+}
+.homeConeten .goodsList li .bottom p{
+	float: left;
+	max-width: calc(100% - 55px);
+	color: #fe5050;
+}
+.homeConeten .goodsList li .bottom button{
+	width: 50px;
+	height: 20px;
+	float: right;
+	margin-right: 5px;
+	border-radius: 25px;
+	color:#fff;
+	font-size: 10px;
+	line-height: 20px;
+	box-shadow: 2px 2px 5px #ccc;
+}
+.homeConeten .goodsList li .bottom .exchangeButton{
+	background-color: #fe5050;
+}
+.homeConeten .goodsList li .bottom .noExchangeButton{
+	background: #c9c9c9;
+}
+.homeConeten .fixedCircle{
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+	background: #318aff;
+	position: fixed;
+	z-index: 100;
+	float: right;
+	right:8px;
+	margin-top: 120px;
+	color: #fff;
+	font-size: 14px;
+	padding: 5px;
+}
+/*商品详情页*/
+.prizeInfoContent{
+	background-color: #f2f2f2;
+}
+.prizeInfoContent header img{
+	width: 100%;
+}
+.prizeInfoContent .goodsInfo{
+	background-color: #fff;
+	line-height: 25px;
+	width:100%;
+	height: auto;
+	padding:10px;
+	overflow: hidden;
+}
+.prizeInfoContent .goodsInfo p{
+	font-size: 15px;
+	color: #222;
+}
+.prizeInfoContent .goodsInfo p span{
+	float: left;
+	font-size: 12px;
+	color: #999;
+}
+.prizeInfoContent .goodsInfo p span:first-child{
+	color: #fe5050;
+	font-size: 15px;
+}
+.prizeInfoContent .goodsInfo p span:nth-child(2){
+	margin-left: 15px;
+	text-decoration: line-through;
+}
+.prizeInfoContent .goodsInfo p span:last-child{
+	float: right;
+}
+.prizeInfoContent article{
+	background-color: #fff;
+	margin-top: 15px;
+	font-size: 13px;
+	color: #222;
+	line-height: 25px;
+	text-indent: 15px;
+	text-align: justify;
+	margin-bottom: 70px;
+}
+.prizeInfoContent article img{
+	width: 100%;
+}
+.prizeInfoContent .bottomArea{
+	width: 100%;
+	padding:0px 10px 0px 15px;
+	height:70px;
+	position: fixed;
+	bottom:0px;
+	background-color: #fff;
+	z-index: 100;
+	font-size: 11px;
+	color: #222;
+}
+.prizeInfoContent .bottomArea p{
+	margin-top: 5px;
+}
+.prizeInfoContent .bottomArea p span:last-child{
+	float: right;
+	margin-right: 15px;
+}
+/*商品加减*/
+.btn-numbox {
+    overflow: hidden;
+    background:#fff; 
+   margin-top: 10px;
+    float: left;
+
+}
+.btn-numbox .count{
+	border-radius: 3px;
+}
+.btn-numbox li {
+    float: left;
+}
+
+.btn-numbox li .number,
+.kucun {
+    display: inline-block;
+    font-size: 14px;
+    color: #666666;
+    vertical-align: sub;
+}
+
+.btn-numbox .count {
+    overflow: hidden;
+    
+}
+
+.btn-numbox .count .num-add,
+.input-num,
+.num-minus{
+    display: inline-block;
+    width: 30px;
+    height:30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 15px;
+    color: #999;
+    cursor: pointer;
+    border: 1px solid #e6e6e6;
+}
+.btn-numbox .icon-minus{
+	background:url(../images/add.png);
+}
+.btn-numbox .icon-minus-forbid{
+	background:url(../images/add.png) 0 0 no-repeat #f5f3f3;
+}
+.btn-numbox .icon-add{
+	background:url(../images/minus.png);
+}
+.btn-numbox .icon-add-forbid{
+	background:url(../images/minus.png) 0 0 no-repeat #f5f3f3;
+}
+.btn-numbox .count .input-num {
+    width: 50px;
+    height: 30px;
+    color: #333;
+    border-left: 0;
+    border-right: 0;
+}
+.prizeInfoContent .bottomArea button{
+	float: right;
+	margin-right:10px;
+	width: 140px;
+	height: 40px;
+	color: #fff;
+	background: #fe5050;
+	border-radius: 5px;
+	margin-top: 5px;
+}
