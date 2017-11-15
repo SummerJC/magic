@@ -247,3 +247,203 @@ button{	border-style: none;}
 	border-radius: 5px;
 	margin-top: 5px;
 }
+
+/*奖品兑换页*/
+.exchangeContent{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-size: cover;
+	background: #fe5050;
+}
+.exchangeContent .inputInfo{
+	width: calc(100% - 30px);
+	height: 320px;
+	background: #fff;
+	margin: 15px;
+	border-radius: 5px;
+}
+.exchangeContent .inputInfo .normalInput{
+	width: 100%;
+	height: 50px;
+	display: block;
+	border-bottom:1px solid #ededed;
+	font-size: 15px;
+}
+.exchangeContent .inputInfo .normalInput p{
+	width: 60px;
+	float: left;
+	
+	color: #222;
+	line-height: 50px;
+	text-align: center;	
+}
+.exchangeContent .inputInfo .normalInput input{
+	width: calc(100% - 60px);
+	height: 45px;
+	border:none;
+}
+
+.exchangeContent .inputInfo .normalInput input::-webkit-input-placeholder, textarea::-webkit-input-placeholder{
+  /* WebKit browsers */
+  color: #ccc;
+}
+.exchangeContent .inputInfo .normalInput input:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #ccc;
+}
+.exchangeContent .inputInfo .normalInput input::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #ccc;
+}
+.exchangeContent .inputInfo .normalInput input::-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #ccc;
+}
+.exchangeContent .inputInfo  .remakes{
+	height: 80px;
+}
+.exchangeContent .inputInfo .remakes textarea{
+	border:none;
+	height: 60px;
+	margin-top: 15px;
+	width: calc(100% - 60px);
+}
+.exchangeContent .inputInfo .goodsInfo{
+	width: 100%;
+	height: 90px;
+	border-bottom:1px solid #ededed;
+}
+.exchangeContent .inputInfo .goodsInfo img{
+	width: 60px;
+	height: 60px;
+	margin: 15px;
+	float: left;
+}
+.exchangeContent .inputInfo .goodsInfo div{
+	width: calc(100% - 90px);
+	height: 60px;
+	margin: 15px 0px;
+	float: left;
+}
+.exchangeContent .inputInfo .goodsInfo div p:first-child{
+	font-size: 15px;
+	color: #222;
+	white-space:nowrap; 
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.exchangeContent .inputInfo .goodsInfo div p:last-child {
+	margin-top: 20px;
+}
+.exchangeContent .inputInfo .goodsInfo div p:last-child span:first-child{
+	font-size: 13px;
+	color: #999;
+}
+.exchangeContent .inputInfo .goodsInfo div p:last-child span:last-child{
+	font-size: 15px;
+	color: #fe5050;
+	float: right;
+	margin-right:10px;
+}
+.exchangeContent .inputInfo .delivery{
+	font-size: 15px;
+	color: #222;
+	padding: 0 15px;
+	line-height: 50px;
+}
+.exchangeContent .inputInfo .delivery span:last-child{
+	float: right;
+}
+.exchangeContent .onsure{
+	width: calc(100% - 30px);
+	height: 80px;
+	margin: 0 15px;
+	float: bottom;
+	bottom: 0px;
+	position: absolute;
+	color: #fff;
+	font-size: 13px;
+}
+.exchangeContent .onsure p{
+	padding-bottom: 8px;
+}
+.exchangeContent .onsure button{
+	width: 100%;
+	height: 50px;
+	background: #ffb43c;
+	border-radius: 5px;
+	font-size: 15px;
+	color: #fff;
+}
+
+/* 兑换成功页面*/
+.exchangeSuccessContent{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-size: cover;
+	background: #fe5050;
+}
+.exchangeSuccessContent ul{
+	width: calc(100% - 30px);
+	height: 300px;
+	background: #fff;
+	margin: 15px;
+	border-radius: 5px;
+	position: absolute;
+}
+.exchangeSuccessContent ul>li{
+	width: 100%;
+	height: auto;
+}
+.exchangeSuccessContent ul>li:first-child p{
+	font-size: 15px;
+	color: #222;
+	text-align: center;
+	margin-top: 10px;
+}
+.exchangeSuccessContent ul>li .residue{
+	font-size: 13px !important;
+	color: #999 !important;
+	margin-top: 30px;
+}
+.exchangeSuccessContent ul>li img{
+	width: 60px;
+	height: 60px;
+	margin:40px auto 0;
+
+}
+.exchangeSuccessContent ul .twoButton{
+	width: calc(100% - 20px);
+	margin: 30px auto 20px;
+	height: auto;
+	overflow: hidden;
+}
+.exchangeSuccessContent ul .twoButton button{
+	width: calc(50% - 8px);
+	float: left;
+	height: 44px;
+	border-radius: 5px;
+	font-size: 15px;
+}
+.exchangeSuccessContent ul .twoButton button:first-child{
+	background: #fff;
+	border:1px solid #e6e6e6;
+	margin-right: 7px;
+}
+.exchangeSuccessContent ul .twoButton button:last-child{
+	background: #fe5050;
+	margin-left: 8px;
+	color: #fff;
+}
+.exchangeSuccessContent ul .share{
+	width: 120px;
+	height: 36px;
+	background: #ffb43c;
+	margin:20px auto;
+	border-radius: 15px;
+	display: block;
+	font-size: 15px;
+	color: #fff;
+}
