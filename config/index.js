@@ -30,7 +30,7 @@ module.exports = {
     proxyTable: {},
     proxyTable: {
       '/ebook': {
-        target: 'localhost',
+        target: 'localhost:8080',
         changeOrigin: true,
         pathRewrite: {
           '^/ebook': '/ebook'
