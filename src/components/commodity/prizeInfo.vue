@@ -24,7 +24,7 @@
                   </ul>
               </li>
   　　　  </ul>
-        <button>立即兑换</button>
+        <button @click='toExchange'>立即兑换</button>
       </div>
          
   </div>
@@ -79,6 +79,9 @@
             this.canAdd = false;
         }
         
+      },
+      toExchange(){
+        this.$router.push({path:'/commodity/exchange'});
       }
     },
     watch: {
