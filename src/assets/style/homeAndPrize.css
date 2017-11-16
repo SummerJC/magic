@@ -25,18 +25,20 @@ button{	border-style: none;}
 	position: absolute;
 	margin-left:13px;
 }
-.homeConeten .twoButton button{
+.homeConeten .twoButton a{
 	width: calc(50% - 2px);
 	color: #fff;
 	float: left;
 	height: 35px;
 	border-radius: 3px;
+	text-align: center;
+	line-height: 35px;
 }
-.homeConeten .twoButton button:first-child{
+.homeConeten .twoButton a:first-child{
 	background-color: #a046ff;
 	margin-right: 2px;
 }
-.homeConeten .twoButton button:last-child{
+.homeConeten .twoButton a:last-child{
 	background-color: #ffb43c;
 	margin-left: 2px;
 }

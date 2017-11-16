@@ -8,8 +8,8 @@
 <!--           <mt-swipe-item>2</mt-swipe-item>
           <mt-swipe-item>3</mt-swipe-item> -->
           <ul class="twoButton">
-              <button >邀请我的好友得积分</button>
-                <button > 查看我的积分</button>
+              <a>邀请我的好友得积分</a>
+                <a href="/personal/personalCenter"> 查看我的积分</a>
           </ul>
         </mt-swipe>
         
