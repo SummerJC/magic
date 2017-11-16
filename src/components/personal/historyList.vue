@@ -1,27 +1,23 @@
 <template>
  <div class="historyContent">
-    <div class="h_content">
-      <div class="h_one">
-        <img src="../../../static/image/ava72.png" />
-        <div class="h_to">
-          <span>金莫颉</span>
-          <p>2017.11.15</p>
-        </div>
-        <div class="h_f">
-          <span>100分</span>
-        </div>
+    <div class="h_content" v-infinite-scroll="loadMore"
+         infinite-scroll-disabled="loading"
+         infinite-scroll-distance="20">
+      <div class="h_one"  v-for="item in 10">
+        <ul>
+          <li >
+            <img src="../../../static/image/ava72.png" />
+            <div class="h_to">
+              <span>金莫颉</span>
+              <p>2017.11.15</p>
+            </div>
+            <div class="h_f">
+              <span>100分</span>
+            </div>
+          </li>
+        </ul>
       </div>
 
-      <div class="h_one">
-        <img src="../../../static/image/ava72.png" />
-        <div class="h_to">
-          <span>金莫颉</span>
-          <p>2017.11.15</p>
-        </div>
-        <div class="h_f">
-          <span>100分</span>
-        </div>
-      </div>
     </div>
 
 
@@ -36,14 +32,30 @@
 <!--</style>-->
 
 <script type="text/babel">
+  import Vue from 'vue'
+  import { InfiniteScroll } from 'mint-ui';
+
+  Vue.use(InfiniteScroll);
+
   export default {
     name: 'hello1',
     data() {
-      return{}
+      return{
+
+        }
       },
 
     methods: {
-
+      loadMore() {
+        this.loading = true;
+        setTimeout(() => {
+          let last = this.list[this.list.length - 1];
+          for (let i = 1; i <= 10; i++) {
+            this.list.push(last + i);
+          }
+          this.loading = false;
+        }, 1000);
+      }
     },
     watch: {
 

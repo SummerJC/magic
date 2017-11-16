@@ -3,18 +3,18 @@
         <div class="banner">
           <div>
            <div class="residue">
-            <span class="ative">60</span>
+            <span class="ative">{{surplus}}</span>
             <p>剩余积分</p>
            </div>
            <div class="all">
-            <span class="ative">100</span>
+            <span class="ative">{{aggregate}}</span>
             <p>获得总积分</p>
            </div>
           </div>
           <ul class="nf">
-              <li>直接推荐好友数 ：324</li>
-              <li class="nf_jian">间接推荐好友数 ： 2431</li>
-              <li>我的推荐人 ： 吴胜</li>
+              <li>直接推荐好友数 ：{{directNum}}</li>
+              <li class="nf_jian">间接推荐好友数 ： {{indirectNum}}</li>
+              <li>我的推荐人 ： {{Myref}}</li>
           </ul>
           <div class="banner_rule">
             <span>活动规则</span>
@@ -94,6 +94,12 @@ import HistoryList from '../../components/personal/historyList'
     components:{HistoryList},
     data() {
        return{
+         surplus:"60",
+         aggregate:"100",
+         directNum:"123",
+         indirectNum:"345",
+         Myref:"吴胜",
+
 
        }
       },
@@ -170,7 +176,7 @@ import HistoryList from '../../components/personal/historyList'
   background: url(../../../static/image/btn-2.png) no-repeat;
   margin-top: 13px;
   height:60px;
-  width:46%;
+  width:calc(50%  - 15px);
   background-size: 100% 100%;
   margin-left: 13px;
 }
@@ -195,6 +201,12 @@ import HistoryList from '../../components/personal/historyList'
     line-height: 50px;
     color: white;
     font-size: 15px;
+  }
+  .List{
+    width:100%;
+    height:auto;
+    overflow: hidden;
+    margin-bottom: 86px;
   }
   .list_s{
     width:calc(100% - 30px);
@@ -230,6 +242,7 @@ import HistoryList from '../../components/personal/historyList'
     background: #ffffff;
     width:calc(100% - 30px);
     margin-left: 15px;
+    overflow: hidden;
   }
   .l_ot{
     padding-top: 18px;
