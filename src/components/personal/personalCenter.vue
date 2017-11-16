@@ -1,4 +1,15 @@
 <template>
+  <div>
+    <div style="width:100%;height:100%;position:absolute">
+            <div class="shareImg" id='toImg'  style="z-index:0" > 
+             <img class="title" src="../../assets/images/word.png">
+              <p>邀请的好友越多，获得积分越多</p>
+              <img src="../../assets/images/sq.gif"> 
+              <p>我的专属二维码</p>
+              <p>好友点击识别后关注即可获得积分</p>
+            </div>
+            <p class="message">长按二维码可分享我的专属海报</p>
+    </div>
     <div class="MyCentent">
         <div class="banner">
           <div>
@@ -77,9 +88,16 @@
           </div>
         </div>
 
-     <footer>
-        <span>邀请好友得积分</span>
+     <footer @click='displayImg'>
+        <span >邀请好友得积分</span>
      </footer>
+    </div>
+       <mt-popup
+        v-model="popupVisible"
+        popup-transition="popup-fade" class="popup"> 
+        <img :src="ownerImg" >
+        <p class="message">长按二维码进行分享</p>
+      </mt-popup> 
     </div>
 </template>
 
@@ -88,10 +106,9 @@
 </style>
 
 <script type="text/babel">
-import HistoryList from '../../components/personal/historyList'
+import '../../assets/html2canvas.js'
   export default {
     name: 'hello2',
-    components:{HistoryList},
     data() {
        return{
          surplus:"60",
@@ -99,15 +116,27 @@ import HistoryList from '../../components/personal/historyList'
          directNum:"123",
          indirectNum:"345",
          Myref:"吴胜",
-
+         ownerImg:'',
+         popupVisible:false
 
        }
       },
     mounted() {
-
+      this.initImg();
     },
     methods: {
-
+      initImg(){
+        var that = this;
+        html2canvas(document.getElementById('toImg'), {
+            onrendered: function(canvas) {
+                var url = canvas.toDataURL("image/png");
+                that.ownerImg = url;
+            },
+        });
+      },
+      displayImg(){
+        this.popupVisible = true;
+      }
     },
     watch: {
 
@@ -115,9 +144,52 @@ import HistoryList from '../../components/personal/historyList'
   }
 </script>
 <style>
-  body{
-    background: #ffdcdc;
-  }
+.popup{
+ background: none;
+ width: calc(100% - 80px)
+}
+.popup img{
+  width: 100%;
+}
+ .shareImg{
+  width: calc(100% - 60px);
+  height: 50%;
+  margin: 35% 30px 0;
+  background: url('../../assets/images/shareQRcode.png');
+  background-size:100% 100%;
+  /*background: #fe5050;*/
+  text-align: center;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 13px;
+  line-height:20px;
+}
+ .shareImg .title{
+  width: 70%;
+  padding-top: 20px;
+}
+.shareImg  img{
+  width: 50%;
+  margin:10px auto;
+}
+ .shareImg  p:nth-child(2){
+  font-size: 13px;
+  margin-top: -20px;
+}
+.message{
+  font-size: 13px;
+  color: #fff;
+  text-align: center;
+  margin-top: 15px;
+}
+.MyCentent{
+  z-index: 10;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  background-size: cover;
+  background: #ffdcdc;
+}
 
     .banner {
       background: url(../../../static/image/pre.png) no-repeat;
@@ -206,7 +278,7 @@ import HistoryList from '../../components/personal/historyList'
     width:100%;
     height:auto;
     overflow: hidden;
-    margin-bottom: 86px;
+    padding-bottom: 86px;
   }
   .list_s{
     width:calc(100% - 30px);
