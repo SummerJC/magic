@@ -33,7 +33,7 @@
  
 // import http from '../utils/axios'
 // import api from '../utils/api'
-// import { Toast } from 'mint-ui'
+import { Toast } from 'mint-ui'
 export default {
 	name:'',
 	mounted(){
