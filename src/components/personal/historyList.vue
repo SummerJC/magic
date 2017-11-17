@@ -41,7 +41,7 @@
     name: 'hello1',
     data() {
       return{
-          list:[]
+        list:[]
         }
       },
 

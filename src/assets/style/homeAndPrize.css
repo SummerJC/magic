@@ -25,18 +25,21 @@ button{	border-style: none;}
 	position: absolute;
 	margin-left:13px;
 }
-.homeConeten .twoButton button{
+.homeConeten .twoButton a{
 	width: calc(50% - 2px);
 	color: #fff;
 	float: left;
 	height: 35px;
 	border-radius: 3px;
+	text-align: center;
+	line-height: 35px;
+	box-shadow: 2px 2px 3px 0 rgba(240, 240, 240, 0.2);
 }
-.homeConeten .twoButton button:first-child{
+.homeConeten .twoButton a:first-child{
 	background-color: #a046ff;
 	margin-right: 2px;
 }
-.homeConeten .twoButton button:last-child{
+.homeConeten .twoButton a:last-child{
 	background-color: #ffb43c;
 	margin-left: 2px;
 }
@@ -446,4 +449,32 @@ button{	border-style: none;}
 	display: block;
 	font-size: 15px;
 	color: #fff;
+}
+.exchangeSuccessContent .mint-popup{
+	width: 100%;
+	height: 100%;
+	background: none;
+}
+.exchangeSuccessContent .arrows{
+	width: 16%;
+	height: 14%;
+	float: right;
+	margin-top: 6%;
+	margin-right: 20px;
+}
+.exchangeSuccessContent .shareToFriend div{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+.exchangeSuccessContent .shareToFriend div:nth-child(1) img{
+	float: right;
+	width: 16%;
+	margin:30% 10% 0 0;
+	float: right;
+}
+.exchangeSuccessContent .shareToFriend div:nth-child(2) img{
+	width: 60%;
+	margin:0 20%;
+	float: left;
 }
