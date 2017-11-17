@@ -33,6 +33,7 @@ button{	border-style: none;}
 	border-radius: 3px;
 	text-align: center;
 	line-height: 35px;
+	box-shadow: 2px 2px 3px 0 rgba(240, 240, 240, 0.2);
 }
 .homeConeten .twoButton a:first-child{
 	background-color: #a046ff;

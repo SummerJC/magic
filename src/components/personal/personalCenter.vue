@@ -185,6 +185,7 @@ import '../../assets/html2canvas.js'
 .MyCentent{
   z-index: 10;
   width: 100%;
+  min-height: 100%;
   height: auto;
   position: absolute;
   background-size: cover;
