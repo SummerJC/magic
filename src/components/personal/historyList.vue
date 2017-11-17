@@ -3,7 +3,7 @@
     <div class="h_content" v-infinite-scroll="loadMore"
          infinite-scroll-disabled="loading"
          infinite-scroll-distance="20">
-      <div class="h_one"  v-for="item in 10">
+      <div class="h_one"  v-for="item in list">
         <ul>
           <li>
             <img src="../../assets/images/ava72.png" />
@@ -33,15 +33,15 @@
 
 <script type="text/babel">
   import Vue from 'vue'
-  import { InfiniteScroll } from 'mint-ui';
+  import { Loadmore } from 'mint-ui';
 
-  Vue.use(InfiniteScroll);
+  Vue.component(Loadmore.name, Loadmore);
 
   export default {
     name: 'hello1',
     data() {
       return{
-        list:[]
+        list:["1","2","3","4","5","6"]
         }
       },
 
@@ -76,7 +76,7 @@
   .h_one{
     height: 70px;
     border-bottom: 1px solid #ededed;
-
+    margin: 0 0 15px 0;
   }
   .h_one img{
     height:40px;
@@ -93,6 +93,9 @@
   .h_to span{
     font-size: 15px;
     color: #222222;
+    width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .h_one  p{
     font-size: 13px;

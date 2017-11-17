@@ -53,8 +53,8 @@
 
             <div class="list_l"  v-infinite-scroll="loadMore"
                  infinite-scroll-disabled="loading"
-                 infinite-scroll-distance="20">
-                <div class="l_one"  v-for="item in 10">
+                 infinite-scroll-distance="10">
+                <div class="l_one"  v-for="item in list">
                   <img src="../../assets/images/ava72.png" />
                   <div class="l_ot">
                     <span>金莫颉</span>
@@ -102,7 +102,7 @@ import '../../assets/html2canvas.js'
          directNum:"123",
          indirectNum:"345",
          Myref:"吴胜",
-        list:[],
+         list:["1","2","3"],
          ownerImg:'',
          popupVisible:false
 
@@ -322,8 +322,12 @@ import '../../assets/html2canvas.js'
     float: left;
   }
   .l_ot span{
+    display: block;
     font-size: 15px;
     color: #222222;
+    width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .l_ot p{
     font-size: 13px;

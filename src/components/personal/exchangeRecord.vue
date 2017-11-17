@@ -3,7 +3,7 @@
        <div class="record" v-infinite-scroll="loadMore"
             infinite-scroll-disabled="loading"
             infinite-scroll-distance="10">
-          <div class="record_on"  v-for="item in 10">
+          <div class="record_on"  v-for="item in list">
             <img src="../../assets/images/Magic.jpg" />
             <div class="record_m">
                 <span>魔法币200个</span>
@@ -39,7 +39,7 @@
     name: 'hello1',
     data() {
       return{
-          list:[]
+          list:["1","2","3","4","5"]
       }
     },
 

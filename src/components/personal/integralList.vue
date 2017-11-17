@@ -90,6 +90,8 @@
   .list_one:last-child{
     border-bottom: none;
   }
+
+
   .first span{
     font-size: 15px;
     color: #ffffff;
@@ -114,7 +116,8 @@
     height: 70px;
     background: #ffffff;
     width:calc(100% - 30px);
-    margin: 3px 0 0 15px;
+    margin-top: 3px;
+    margin-left: 15px;
     border-radius: 6px;
   }
   .h_one img{
@@ -132,6 +135,9 @@
   .h_to span{
     font-size: 15px;
     color: #222222;
+    width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .h_one  p{
     font-size: 13px;
@@ -153,7 +159,7 @@
 
   .h_list{
     width:calc(100% - 30px);
-    margin:  10px 0 0 15px;
+    margin:  10px 0 15px 15px;
     border-radius: 6px;
     background: #ffffff;
   }
@@ -188,6 +194,9 @@
     line-height: 70px;
     font-size: 15px;
     color: #222222;
+    width: 100px;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
   .one_ff span{
     float: right;
