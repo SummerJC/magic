@@ -106,15 +106,15 @@
       color: #666666;
  }
   .foot{
-    width: calc(100% - 30px);
+    width: calc(100% - 30px)!important;
     background: url(../../assets/images/btn-4.png);
-    width:100%;
     height: 70px;
     background-size: 100% 100%;
     overflow: hidden;
     position: fixed;
     bottom: 0;
     display: block;
+    margin: 0 auto;
   }
   .foot span{
     display: block;
