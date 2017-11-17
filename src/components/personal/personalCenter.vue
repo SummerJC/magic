@@ -22,14 +22,17 @@
         </div>
 
       <div class="center">
+        <router-link :to="{path:'/personal/integralList'}">
           <div class="center_rank">
-
                 <p>积分排行榜</p>
           </div>
+        </router-link>
 
+        <router-link :to="{path:'/personal/exchangeRecord'}">
         <div class="center_record">
               <p>兑换记录</p>
         </div>
+        </router-link>
       </div>
 
         <div class="List">
@@ -37,9 +40,11 @@
                 <p>我的推荐好友</p>
             </div>
 
-            <div class="list_l">
-                <div class="l_one">
-                  <img src="../../../static/image/ava72.png" />
+            <div class="list_l"  v-infinite-scroll="loadMore"
+                 infinite-scroll-disabled="loading"
+                 infinite-scroll-distance="20">
+                <div class="l_one"  v-for="item in 10">
+                  <img src="../../assets/images/ava72.png" />
                   <div class="l_ot">
                     <span>金莫颉</span>
                     <p>2017.11.15</p>
@@ -50,31 +55,6 @@
                 </div>
             </div>
 
-          <div class="list_l">
-            <div class="l_one">
-              <img src="../../../static/image/ava72.png" />
-              <div class="l_ot">
-                <span>金莫颉</span>
-                <p>2017.11.15</p>
-              </div>
-              <div class="l_f">
-                直接好友
-              </div>
-            </div>
-          </div>
-
-          <div class="list_l">
-            <div class="l_one">
-              <img src="../../../static/image/ava72.png" />
-              <div class="l_ot">
-                <span>金莫颉</span>
-                <p>2017.11.15</p>
-              </div>
-              <div class="l_f">
-                直接好友
-              </div>
-            </div>
-          </div>
         </div>
 
      <footer>
@@ -88,6 +68,8 @@
 </style>
 
 <script type="text/babel">
+  import Vue from 'vue'
+  import { InfiniteScroll } from 'mint-ui';
 import HistoryList from '../../components/personal/historyList'
   export default {
     name: 'hello2',
@@ -99,7 +81,7 @@ import HistoryList from '../../components/personal/historyList'
          directNum:"123",
          indirectNum:"345",
          Myref:"吴胜",
-
+        list:[]
 
        }
       },
@@ -107,7 +89,16 @@ import HistoryList from '../../components/personal/historyList'
 
     },
     methods: {
-
+      loadMore() {
+        this.loading = true;
+        setTimeout(() => {
+          let last = this.list[this.list.length - 1];
+          for (let i = 1; i <= 10; i++) {
+            this.list.push(last + i);
+          }
+          this.loading = false;
+        }, 2500);
+      }
     },
     watch: {
 
@@ -120,7 +111,7 @@ import HistoryList from '../../components/personal/historyList'
   }
 
     .banner {
-      background: url(../../../static/image/pre.png) no-repeat;
+      background: url(../../assets/images/pre.png) no-repeat;
       width:100%;
       height:250px;
       background-size: 100% 100%;
@@ -173,7 +164,7 @@ import HistoryList from '../../components/personal/historyList'
   }
 .center .center_rank{
   float: left;
-  background: url(../../../static/image/btn-2.png) no-repeat;
+  background: url(../../assets/images/btn-2.png) no-repeat;
   margin-top: 13px;
   height:60px;
   width:calc(50%  - 15px);
@@ -188,7 +179,7 @@ import HistoryList from '../../components/personal/historyList'
     }
 
   .center_record{
-    background: url(../../../static/image/btn-3.png) no-repeat;
+    background: url(../../assets/images/btn-3.png) no-repeat;
     margin-top: 13px;
     height:60px;
     width:46%;

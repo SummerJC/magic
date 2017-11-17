@@ -5,8 +5,8 @@
          infinite-scroll-distance="20">
       <div class="h_one"  v-for="item in 10">
         <ul>
-          <li >
-            <img src="../../../static/image/ava72.png" />
+          <li>
+            <img src="../../assets/images/ava72.png" />
             <div class="h_to">
               <span>金莫颉</span>
               <p>2017.11.15</p>
@@ -41,7 +41,7 @@
     name: 'hello1',
     data() {
       return{
-
+          list:[]
         }
       },
 
@@ -99,7 +99,10 @@
     color: #999999;
     padding-top: 6px;
   }
-  .h_f span{
+  .h_one:last-child{
+    border-bottom: none;
+  }
+   .h_f span{
     float:right;
     margin: 25px 20px 0 0;
     font-size: 13px;

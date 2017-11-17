@@ -2,16 +2,18 @@
     <div class="integContent">
       <div class="first">
         <span>排行冠军奖励5积分</span>
-        <div class="frist_r">
+        <router-link :to="{path:'/personal/historyList'}">
+          <div class="frist_r">
             <span>查看历史冠军</span>
-        </div>
+          </div>
+        </router-link>
       </div>
 
       <div class="h_one">
         <div class="h_num">
           <span>32</span>
         </div>
-        <img src="../../../static/image/ava72.png" />
+        <img src="../../assets/images/ava72.png" />
         <div class="h_to">
           <span>金莫颉</span>
           <p>2017.11.15</p>
@@ -21,13 +23,15 @@
         </div>
       </div>
 
-      <div class="h_list">
-          <div class="list_one">
+      <div class="h_list"  v-infinite-scroll="loadMore"
+           infinite-scroll-disabled="loading"
+           infinite-scroll-distance="10">
+          <div class="list_one"  v-for="item in 10">
               <div class="one_l">
-                  <span>1</span>
+                  <span>{{item}}</span>
               </div>
             <div class="one_in">
-              <img src="../../../static/image/ava72.png" />
+              <img src="../../assets/images/ava72.png" />
             </div>
             <div class="one_m">
               <p>王二傻</p>
@@ -46,14 +50,28 @@
 </style>
 
 <script type="text/babel">
+
+  import Vue from 'vue'
+  import { InfiniteScroll } from 'mint-ui';
   export default {
     name: 'hello1',
     data() {
-      return{}
+      return{
+          list:[]
+      }
     },
 
     methods: {
-
+      loadMore() {
+        this.loading = true;
+        setTimeout(() => {
+          let last = this.list[this.list.length - 1];
+          for (let i = 1; i <= 10; i++) {
+            this.list.push(last + i);
+          }
+          this.loading = false;
+        }, 2500);
+      }
     },
     watch: {
 
@@ -68,6 +86,10 @@
   .first{
     height: 62px;
   }
+
+  .list_one:last-child{
+    border-bottom: none;
+  }
   .first span{
     font-size: 15px;
     color: #ffffff;
@@ -76,7 +98,7 @@
     float: left;
   }
   .frist_r{
-    background: url(../../../static/image/ranking.png) no-repeat;
+    background: url(../../assets/images/ranking.png) no-repeat;
     background-size: 100% 100%;
     width: 150px;
     height: 50px;
@@ -138,7 +160,7 @@
 
   .list_one{
     width: 100%;
-    border-bottom: 1px solid #318aff;
+    border-bottom: 1px solid #ededed;
     height: 70px;
   }
 
