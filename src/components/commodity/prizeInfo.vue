@@ -75,7 +75,7 @@
            this.inputNum = parseInt(this.inputNum)+1;
         }
         var addInputNum = this.inputNum+1;
-        if(addInputNum*this.integral < this.totalIntegral && addInputNum < this.inventory){
+        if(addInputNum*this.integral > this.totalIntegral || addInputNum > this.inventory){
             this.canAdd = false;
         }
         
