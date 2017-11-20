@@ -2,7 +2,7 @@
     <div class="exchangContent">
 
 
-
+      <div class="record">
        <div>
           <div class="record_on"  v-for="item in list">
             <img src="../../assets/images/Magic.jpg" />
@@ -18,6 +18,7 @@
 
 
        </div>
+      </div>
           <div class="foot_v">
             <div class="foot">
               <span>下载魔法现金APP ，现金借款不用愁</span>
