@@ -41,6 +41,7 @@ export default {
 	},
   created() {
       document.title = '绑定手机号'
+      
       console.log(this.phoneNum)
     },
 	data(){
