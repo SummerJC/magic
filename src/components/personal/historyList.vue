@@ -25,7 +25,7 @@
           <mt-spinner type="fading-circle">
           </mt-spinner>
       </p>
-      <p else>
+      <p v-else>
         已加载完毕
       </p>
     </div>
@@ -46,7 +46,7 @@
     name: 'hello1',
     data() {
       return{
-        list:["1","2","3","4","5","6","7","8","9","10"],
+        list:["1","2","3","4","5","6"],
         showLoading:true,
         loadGif:true,
         loading:false
@@ -54,17 +54,19 @@
       },
 
     methods: {
-
       loadMore() {
         this.loading = true;
+        this.loadGif = true;
         setTimeout(() => {
+           this.loadGif = false;
           let last = this.list[this.list.length - 1];
           for (let i = 1; i <= 10; i++) {
             this.list.push(last + i);
           }
-         
-        }, 2500);
+          this.loading = false;
+        }, 1000);
       }
+
     },
     watch: {
 
