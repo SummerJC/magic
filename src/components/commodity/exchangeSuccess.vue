@@ -7,8 +7,8 @@
             <p class="residue">剩余可用积分:20</p>
         </li>
         <li class="twoButton">
-            <button>查看兑换记录</button>
-            <button>返回活动主页</button>
+            <button @click='toHistory'>查看兑换记录</button>
+             <button @click='toIndex'>返回活动主页</button>
         </li>
         <li ><button class="share" @click='shareToFriend'>分享给好友</button></li>
       </ul>
@@ -48,6 +48,12 @@
       },
       closePopup(){
          this.popupVisible = false;
+      },
+      toHistory(){
+        this.$router.push({path:'/personal/exchangeRecord'});
+      },
+      toIndex(){
+        this.$router.push({path:'/'});
       }
     
     },

@@ -11,6 +11,8 @@ import 'vue-ydui/dist/ydui.rem.css';
 import 'mint-ui/lib/style.css';
   import http from './utils/axios'
   import api from './utils/api'
+  import VueWechatTitle from 'vue-wechat-title';  
+Vue.use(VueWechatTitle);
 Vue.use(MintUi);
 Vue.use(VueResource)
 Vue.config.productionTip = false

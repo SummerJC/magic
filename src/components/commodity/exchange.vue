@@ -44,7 +44,7 @@ import { Toast } from 'mint-ui'
         var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/; 
         if(this.userName==''){
           return this.alertMessage('请输入收货人姓名');
-        }else if(myreg.test(this.phoneNum)){
+        }else if(!myreg.test(this.phoneNum)){
           return this.alertMessage('请输入合法的号码');
         }else if(this.message ==''){
           return this.alertMessage('请输入收货人地址或兑换平台账号');
