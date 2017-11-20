@@ -9,9 +9,12 @@ import YDUI from 'vue-ydui';
 import MintUi from 'mint-ui';
 import 'vue-ydui/dist/ydui.rem.css';
 import 'mint-ui/lib/style.css';
-  import http from './utils/axios'
-  import api from './utils/api'
-  import VueWechatTitle from 'vue-wechat-title';  
+import http from './utils/axios'
+import api from './utils/api'
+import VueWechatTitle from 'vue-wechat-title'; 
+import { InfiniteScroll } from 'mint-ui';
+
+Vue.use(InfiniteScroll); 
 Vue.use(VueWechatTitle);
 Vue.use(MintUi);
 Vue.use(VueResource)

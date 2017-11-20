@@ -17,9 +17,18 @@
           </li>
         </ul>
       </div>
-
+       
     </div>
-
+    <div class="loadingMore">
+      <p v-if="loadGif" class="page-infinite-loading">
+          加载中...
+          <mt-spinner type="fading-circle">
+          </mt-spinner>
+      </p>
+      <p else>
+        已加载完毕
+      </p>
+    </div>
 
 
  </div>
@@ -33,19 +42,19 @@
 
 <script type="text/babel">
   import Vue from 'vue'
-  import { Loadmore } from 'mint-ui';
-
-  Vue.component(Loadmore.name, Loadmore);
-
   export default {
     name: 'hello1',
     data() {
       return{
-        list:["1","2","3","4","5","6"]
+        list:["1","2","3","4","5","6","7","8","9","10"],
+        showLoading:true,
+        loadGif:true,
+        loading:false
         }
       },
 
     methods: {
+
       loadMore() {
         this.loading = true;
         setTimeout(() => {
@@ -53,8 +62,8 @@
           for (let i = 1; i <= 10; i++) {
             this.list.push(last + i);
           }
-          this.loading = false;
-        }, 1000);
+         
+        }, 2500);
       }
     },
     watch: {
@@ -66,6 +75,17 @@
 <style>
   html body{
     background: #fe5050;
+  }
+  .mint-spinner-fading-circle > div::before{
+   background-color: #fff !important;
+  }
+  .loadingMore{
+    text-align: center;
+    color: #fff;
+    font-size: 13px;
+  }
+  .loadingMore .mint-spinner-fading-circle{
+    margin: 0 auto;
   }
   .h_content{
     background: #ffffff;
