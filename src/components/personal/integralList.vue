@@ -25,7 +25,7 @@
 
       <div class="h_list"  v-infinite-scroll="loadMore"
            infinite-scroll-disabled="loading"
-           infinite-scroll-distance="10">
+         infinite-scroll-distance="10">
           <div class="list_one"  v-for="item in 10">
               <div class="one_l">
                   <span>{{item}}</span>
@@ -34,7 +34,7 @@
               <img src="../../assets/images/ava72.png" />
             </div>
             <div class="one_m">
-              <p>王二傻</p>
+              <p>吴二傻</p>
             </div>
             <div class="one_ff">
               <span>25.5分</span>
@@ -57,7 +57,8 @@
     name: 'hello1',
     data() {
       return{
-          list:[]
+        list:[],
+        col:["#ffb400","#92beeb","#d79976"]
       }
     },
 
@@ -67,7 +68,8 @@
         setTimeout(() => {
           let last = this.list[this.list.length - 1];
           for (let i = 1; i <= 10; i++) {
-            this.list.push(last + i);
+            this.list.push(last + i).style.background=last.col[i];
+
           }
           this.loading = false;
         }, 2500);

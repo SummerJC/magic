@@ -1,8 +1,9 @@
 <<template>
     <div class="exchangContent">
-       <div class="record" v-infinite-scroll="loadMore"
-            infinite-scroll-disabled="loading"
-            infinite-scroll-distance="10">
+
+
+
+       <div>
           <div class="record_on"  v-for="item in list">
             <img src="../../assets/images/Magic.jpg" />
             <div class="record_m">
@@ -13,13 +14,11 @@
                 <li>支付数量:40</li>
                 <li>兑换时间:2017.11.16 12:32:45</li>
               </ul>
-
-
           </div>
 
 
        </div>
-          <div class="">
+          <div class="foot_v">
             <div class="foot">
               <span>下载魔法现金APP ，现金借款不用愁</span>
             </div>
@@ -39,21 +38,25 @@
     name: 'hello1',
     data() {
       return{
-          list:["1","2","3","4","5"]
+          list:["1","2","3","4","5"],
+        loading:false
+
       }
     },
 
     methods: {
       loadMore() {
-        this.loading = true;
+      var that = this;
+        that.loading = true;
         setTimeout(() => {
-          let last = this.list[this.list.length - 1];
+          let last = this.list[that.list.length - 1];
           for (let i = 1; i <= 10; i++) {
-            this.list.push(last + i);
+            that.list.push(last + i);
           }
-          this.loading = false;
+          that.loading = false;
         }, 2500);
-      }
+
+      },
     },
     watch: {
 
@@ -114,7 +117,7 @@
     position: fixed;
     bottom: 0;
     display: block;
-    margin: 0 auto;
+    margin: 0 15px;
   }
   .foot span{
     display: block;
@@ -125,4 +128,5 @@
     color: #ffffff;
     text-align: center;
   }
+
 </style>
