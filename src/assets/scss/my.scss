@@ -1,0 +1,473 @@
+@charset "utf-8";
+
+//今日积分榜
+
+.integContent{ 
+    width: 100%;
+    height: 100%;
+    background: #fe5050;
+  
+  .first{
+    height: 62px;
+  }
+
+  .list_one:last-child{
+    border-bottom: none;
+  }
+
+
+  .first span{
+    font-size: 15px;
+    color: #ffffff;
+    line-height: 62px;
+    margin: 0 0 0 15px;
+    float: left;
+  }
+  .frist_r{ 
+    background: url(../../assets/images/ranking.png) no-repeat;
+    background-size: 100% 100%;
+    width: 150px;
+    height: 50px;
+    float: right;
+    margin: 13px 8px 0 0;
+  }
+  .frist_r span{
+    line-height: 40px;
+    margin-left: 30px;
+    display: block;
+  }
+  .h_one{
+    height: 70px;
+    background: #ffffff;
+    width:calc(100% - 30px);
+    margin-top: 3px;
+    margin-left: 15px;
+    border-radius: 6px;
+  }
+  .h_one img{
+    height:40px;
+    width:40px;
+    float: left;
+    display: block;
+    margin: 15px 10px 15px 15px;
+  }
+  .h_to {
+    padding-top: 18px;
+    float: left;
+  }
+
+  .h_to span{
+    font-size: 15px;
+    color: #222222;
+    width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .h_one  p{
+    font-size: 13px;
+    color: #999999;
+    padding-top: 6px;
+  }
+  .h_f span{
+    float:right;
+    margin: 25px 20px 0 0;
+    font-size: 13px;
+    color: #999999;
+  }
+  .h_num span{
+    float: left;
+    line-height: 70px;
+    margin:  0 0 0 20px;
+    font-size: 13px;
+  }
+
+  .h_list{
+    width:calc(100% - 30px);
+    margin:  10px 0 15px 15px;
+    border-radius: 6px;
+    background: #ffffff;
+  }
+
+  .list_one{
+    width: 100%;
+    border-bottom: 1px solid #ededed;
+    height: 70px;
+  }
+
+  .one_l{
+    float: left;
+    background: #ffb400;
+    font-size: 13px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: #ffffff;
+    text-align: center;
+    line-height: 20px;
+    margin: 25px 15px 25px 15px;
+  }
+
+  .one_in img{
+    width: 40px;
+    height: 40px;
+    float: left;
+    margin: 15px 15px 15px 0;
+  }
+  .one_m p{
+    float: left;
+    line-height: 70px;
+    font-size: 15px;
+    color: #222222;
+    width: 100px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .one_ff span{
+    float: right;
+    font-size: 13px;
+    color: #666666;
+    line-height: 70px;
+    margin: 0 20px 0 0;
+  }
+}
+//个人中心
+.perCenter{
+    .popup{
+ background: none;
+ width: calc(100% - 80px)
+}
+.popup img{
+  width: 100%;
+}
+ .shareImg{
+  width: calc(100% - 60px);
+  height: 50%;
+  margin: 35% 30px 0;
+  background: url('../../assets/images/shareQRcode.png');
+  background-size:100% 100%;
+  /*background: #fe5050;*/
+  text-align: center;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 13px;
+  line-height:20px;
+}
+ .shareImg .title{
+  width: 70%;
+  padding-top: 20px;
+}
+.shareImg  img{
+  width: 50%;
+  margin:10px auto;
+}
+ .shareImg  p:nth-child(2){
+  font-size: 13px;
+  margin-top: -20px;
+}
+.message{
+  font-size: 13px;
+  color: #fff;
+  text-align: center;
+  margin-top: 15px;
+}
+.MyCentent{
+  z-index: 10;
+  width: 100%;
+  min-height: 100%;
+  height: auto;
+  position: absolute;
+  background-size: cover;
+  background: #ffdcdc;
+}
+
+    .banner {
+      background: url(../../assets/images/pre.png) no-repeat;
+      width:100%;
+      height:250px;
+      background-size: 100% 100%;
+      overflow: hidden;
+    }
+  .banner .residue{
+    text-align: center;
+    width:50%;
+    border-right: 1px solid #fe9798;
+    float: left;
+    margin-top: 30px;
+  }
+  .banner .ative{
+      font-size: 32px;
+    color: #fffeae;
+  }
+  .banner .all{
+
+    text-align: center;
+    width:50%;
+    float: left;
+    margin-top: 30px;
+  }
+  .banner p{
+    font-size: 14px;
+    color: white;
+  }
+ .nf{
+    width:100%;
+    height:200px;
+    padding-top: 130px;
+   margin: 0 0 45px 15px;
+  }
+.nf li{
+  font-size: 13px;
+  color: white;
+}
+  .nf .nf_jian{
+    margin: 10px 0;
+  }
+  .banner_rule span{
+    text-align: center;
+   display: block;
+    margin-top: -20px;
+    font-size: 13px;
+    color: white;
+  }
+  .center{
+    display: block;
+  }
+.center .center_rank{
+  float: left;
+  background: url(../../assets/images/btn-2.png) no-repeat;
+  margin-top: 13px;
+  height:60px;
+  width:calc(50%  - 15px);
+  background-size: 100% 100%;
+  margin-left: 13px;
+}
+  .center .center_rank p{
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    font-size: 15px;
+    }
+
+  .center_record{
+    background: url(../../assets/images/btn-3.png) no-repeat;
+    margin-top: 13px;
+    height:60px;
+    width:46%;
+    background-size: 100% 100%;
+    margin-right: 13px;
+    float: left;
+  }
+  .center .center_record p{
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    font-size: 15px;
+  }
+  .List{
+    width:100%;
+    height:auto;
+    overflow: hidden;
+    padding-bottom: 86px;
+  }
+  .list_s{
+    width:calc(100% - 30px);
+    height: 40px;
+    background: #a046fe;
+    float: left;
+    margin-top: 3px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin-left: 15px;
+  }
+  .list_s p{
+    color: #ffffff;
+     font-size: 15px;
+    text-align: center;
+    line-height: 40px;
+  }
+  .l_one{
+    height: 70px;
+   width:calc(100% - 30px);
+    border-bottom:1px solid #ededed;
+    margin-left: 15px;
+  }
+  .l_one img{
+    height:40px;
+    width:40px;
+    float: left;
+    display: block;
+    margin: 15px 10px 15px 0px;
+  }
+  .list_l{
+    float: left;
+    background: #ffffff;
+    width:calc(100% - 30px);
+    margin-left: 15px;
+    overflow: hidden;
+  }
+  .l_ot{
+    padding-top: 18px;
+    float: left;
+  }
+  .l_ot span{
+    display: block;
+    font-size: 15px;
+    color: #222222;
+    width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .l_ot p{
+    font-size: 13px;
+    color: #999999;
+    padding-top: 6px;
+  }
+  .l_f{
+    float:right;
+    margin: 25px 0 0 0;
+    font-size: 13px;
+    color: #999999;
+  }
+  footer{
+    box-shadow: 1px 5px 6px #eaaeae;
+    margin-top: 13px;
+    float: left;
+    background: #fe5050;
+    height: 66px;
+    width:calc(100% - 30px);
+    margin-left: 15px;
+    border-radius: 6px;
+    text-align: center;
+    position: fixed;
+    bottom: 10px;
+  }
+  footer span{
+    color: #ffffff;
+    font-size: 15px;
+    line-height: 65px;
+  }
+
+    
+}
+
+//历史排行冠军
+.historyContent{
+    width: 100%;
+    height: 100%; 
+    background: #fe5050;
+  
+  .h_content{
+    background: #ffffff;
+    width:calc(100% - 30px);
+    border-radius: 8px;
+    margin: 15px 0 0 15px;
+  }
+  .h_one{
+    height: 70px;
+    border-bottom: 1px solid #ededed;
+    margin: 0 0 15px 0;
+  }
+  .h_one img{
+    height:40px;
+    width:40px;
+    float: left;
+    display: block;
+    margin: 15px 10px 15px 15px;
+  }
+  .h_to {
+    padding-top: 18px;
+    float: left;
+  }
+
+  .h_to span{
+    font-size: 15px;
+    color: #222222;
+    width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .h_one  p{
+    font-size: 13px;
+    color: #999999;
+    padding-top: 6px;
+  }
+  .h_one:last-child{
+    border-bottom: none;
+  }
+   .h_f span{
+    float:right;
+    margin: 25px 20px 0 0;
+    font-size: 13px;
+    color: #999999;
+
+  }
+}
+
+
+//兑换记录
+
+.exchangContent{
+    html body{
+    background: #fe5050;
+  }
+  .record{
+    width: calc(100% - 30px);
+    background: #ffffff;
+    margin: 15px 0 78px 15px;
+    border-radius: 8px;
+    height:auto;
+
+
+  }
+  .record_on{
+    width: 100%;
+    height: 110px;
+    border-bottom: 1px solid #ededed;
+  }
+  .record_on:last-child{
+    border-bottom: none;
+  }
+  .record_on img{
+    background-size: 100% 100%;
+    background: no-repeat;
+    width: 80px;
+    height: 80px;
+    border: 1px solid #e5e5e5;
+    display: block;
+    float: left;
+    margin: 15px;
+  }
+  .record_m span{
+    width: 178px;
+    display: inline-block;
+    margin: 16px 0 10px 0;
+    font-size: 14px;
+    color: #222222;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+    .record_con li{
+      font-size: 13px;
+      color: #666666;
+ }
+  .foot{
+    width: calc(100% - 30px)!important;
+    background: url(../../assets/images/btn-4.png);
+    height: 70px;
+    background-size: 100% 100%;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    display: block;
+    margin: 0 15px;
+  }
+  .foot span{
+    display: block;
+    width: calc(100% - 30px);
+    margin: 0 0 0 10px;
+    line-height: 70px;
+    font-size: 15px;
+    color: #ffffff;
+    text-align: center;
+  }
+}

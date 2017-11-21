@@ -1,11 +1,9 @@
 <template>
  <div class="historyContent">
-    <div class="h_content" v-infinite-scroll="loadMore"
-         infinite-scroll-disabled="loading"
-         infinite-scroll-distance="20">
+   
+    <div class="h_content">
       <div class="h_one"  v-for="item in list">
-        <ul>
-          <li>
+
             <img src="../../assets/images/ava72.png" />
             <div class="h_to">
               <span>金莫颉</span>
@@ -14,17 +12,15 @@
             <div class="h_f">
               <span>100分</span>
             </div>
-          </li>
-        </ul>
+
       </div>
-
-    </div>
-
+     
 
 
- </div>
 
+   </div>
 
+</div>
 </template>
 
 <!--<style scoped>-->
@@ -46,16 +42,8 @@
       },
 
     methods: {
-      loadMore() {
-        this.loading = true;
-        setTimeout(() => {
-          let last = this.list[this.list.length - 1];
-          for (let i = 1; i <= 10; i++) {
-            this.list.push(last + i);
-          }
-          this.loading = false;
-        }, 1000);
-      }
+
+
     },
     watch: {
 

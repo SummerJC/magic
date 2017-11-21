@@ -1,5 +1,6 @@
 <template>
-  <div>
+	
+  <div class="perCenter">
     <div style="width:100%;height:100%;position:absolute">
             <div class="shareImg" id='toImg'  style="z-index:0" >
              <img class="title" src="../../assets/images/word.png">
@@ -89,6 +90,8 @@
 
   import Vue from 'vue'
   import { InfiniteScroll } from 'mint-ui';
+
+  Vue.use(InfiniteScroll);
 import HistoryList from '../../components/personal/historyList'
 
 import '../../assets/html2canvas.js'

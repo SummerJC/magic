@@ -12,10 +12,15 @@ import 'mint-ui/lib/style.css';
   import http from './utils/axios'
   import api from './utils/api'
   import VueWechatTitle from 'vue-wechat-title';  
+  
+ import'../src/assets/scss/my.scss'
+ 
 Vue.use(VueWechatTitle);
 Vue.use(MintUi);
 Vue.use(VueResource)
 Vue.config.productionTip = false
+
+
 
 new Vue({
   el: '#app',

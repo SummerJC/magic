@@ -35,6 +35,7 @@
   import Vue from 'vue'
   import { InfiniteScroll } from 'mint-ui';
 
+
   export default {
     name: 'hello1',
     data() {

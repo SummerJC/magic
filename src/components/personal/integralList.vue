@@ -25,7 +25,7 @@
 
       <div class="h_list"  v-infinite-scroll="loadMore"
            infinite-scroll-disabled="loading"
-         infinite-scroll-distance="10">
+         infinite-scroll-distance="deCheck">
           <div class="list_one"  v-for="item in 10">
               <div class="one_l">
                   <span>{{item}}</span>
@@ -58,20 +58,22 @@
     data() {
       return{
         list:[],
-        col:["#ffb400","#92beeb","#d79976"]
+        col:["#ffb400","#92beeb","#d79976"],
+        deCheck:"10"
       }
     },
 
     methods: {
       loadMore() {
-        this.loading = true;
+        var that = this;
+        that.loading = true;
         setTimeout(() => {
-          let last = this.list[this.list.length - 1];
+          let last = this.list[that.list.length - 1];
           for (let i = 1; i <= 10; i++) {
-            this.list.push(last + i).style.background=last.col[i];
+            that.list.push(last + i);
 
           }
-          this.loading = false;
+          that.loading = false;
         }, 2500);
       }
     },
@@ -82,129 +84,5 @@
 </script>
 
 <style>
-  html body{
-    background: #fe5050;
-  }
-  .first{
-    height: 62px;
-  }
-
-  .list_one:last-child{
-    border-bottom: none;
-  }
-
-
-  .first span{
-    font-size: 15px;
-    color: #ffffff;
-    line-height: 62px;
-    margin: 0 0 0 15px;
-    float: left;
-  }
-  .frist_r{
-    background: url(../../assets/images/ranking.png) no-repeat;
-    background-size: 100% 100%;
-    width: 150px;
-    height: 50px;
-    float: right;
-    margin: 13px 8px 0 0;
-  }
-  .frist_r span{
-    line-height: 40px;
-    margin-left: 30px;
-    display: block;
-  }
-  .h_one{
-    height: 70px;
-    background: #ffffff;
-    width:calc(100% - 30px);
-    margin-top: 3px;
-    margin-left: 15px;
-    border-radius: 6px;
-  }
-  .h_one img{
-    height:40px;
-    width:40px;
-    float: left;
-    display: block;
-    margin: 15px 10px 15px 15px;
-  }
-  .h_to {
-    padding-top: 18px;
-    float: left;
-  }
-
-  .h_to span{
-    font-size: 15px;
-    color: #222222;
-    width: 120px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .h_one  p{
-    font-size: 13px;
-    color: #999999;
-    padding-top: 6px;
-  }
-  .h_f span{
-    float:right;
-    margin: 25px 20px 0 0;
-    font-size: 13px;
-    color: #999999;
-  }
-  .h_num span{
-    float: left;
-    line-height: 70px;
-    margin:  0 0 0 20px;
-    font-size: 13px;
-  }
-
-  .h_list{
-    width:calc(100% - 30px);
-    margin:  10px 0 15px 15px;
-    border-radius: 6px;
-    background: #ffffff;
-  }
-
-  .list_one{
-    width: 100%;
-    border-bottom: 1px solid #ededed;
-    height: 70px;
-  }
-
-  .one_l{
-    float: left;
-    background: #ffb400;
-    font-size: 13px;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    color: #ffffff;
-    text-align: center;
-    line-height: 20px;
-    margin: 25px 15px 25px 15px;
-  }
-
-  .one_in img{
-    width: 40px;
-    height: 40px;
-    float: left;
-    margin: 15px 15px 15px 0;
-  }
-  .one_m p{
-    float: left;
-    line-height: 70px;
-    font-size: 15px;
-    color: #222222;
-    width: 100px;
-    text-overflow: ellipsis;
-    overflow: hidden;
-  }
-  .one_ff span{
-    float: right;
-    font-size: 13px;
-    color: #666666;
-    line-height: 70px;
-    margin: 0 20px 0 0;
-  }
+  
 </style>
