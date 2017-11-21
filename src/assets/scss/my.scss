@@ -2,11 +2,11 @@
 
 //今日积分榜
 
-.integContent{ 
+.integContent{
     width: 100%;
     height: 100%;
     background: #fe5050;
-  
+
   .first{
     height: 62px;
   }
@@ -21,7 +21,7 @@
     margin: 0 0 0 15px;
     float: left;
   }
-  .frist_r{ 
+  .frist_r{
     background: url(../../assets/images/ranking.png) no-repeat;
     background-size: 100% 100%;
     width: 150px;
@@ -345,15 +345,16 @@
     line-height: 65px;
   }
 
-    
+
 }
 
 //历史排行冠军
 .historyContent{
+    overflow: hidden;
     width: 100%;
-    height: 100%; 
+    height: 100%;
     background: #fe5050;
-  
+
   .h_content{
     background: #ffffff;
     width:calc(100% - 30px);
