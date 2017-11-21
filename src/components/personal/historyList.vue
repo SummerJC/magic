@@ -16,8 +16,6 @@
 
       </div>
 
-
-
       </div>
 
 
@@ -81,63 +79,5 @@
 </script>
 
 <style>
-  html body{
-    background: #fe5050;
-  }
-  .mint-spinner-fading-circle > div::before{
-   background-color: #fff !important;
-  }
-  .loadingMore{
-    text-align: center;
-    color: #fff;
-    font-size: 13px;
-  }
-  .loadingMore .mint-spinner-fading-circle{
-    margin: 0 auto;
-  }
-  .h_content{
-    background: #ffffff;
-    width:calc(100% - 30px);
-    border-radius: 8px;
-    margin: 15px 0 0 15px;
-  }
-  .h_one{
-    height: 70px;
-    border-bottom: 1px solid #ededed;
-    margin: 0 0 15px 0;
-  }
-  .h_one img{
-    height:40px;
-    width:40px;
-    float: left;
-    display: block;
-    margin: 15px 10px 15px 15px;
-  }
-  .h_to {
-    padding-top: 18px;
-    float: left;
-  }
 
-  .h_to span{
-    font-size: 15px;
-    color: #222222;
-    width: 120px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .h_one  p{
-    font-size: 13px;
-    color: #999999;
-    padding-top: 6px;
-  }
-  .h_one:last-child{
-    border-bottom: none;
-  }
-   .h_f span{
-    float:right;
-    margin: 25px 20px 0 0;
-    font-size: 13px;
-    color: #999999;
-
-  }
 </style>
