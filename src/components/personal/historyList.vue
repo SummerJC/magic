@@ -17,28 +17,27 @@
       </div>
 
 
-          </li>
-        </ul>
+
       </div>
 
-    </div>
-    <div class="loadingMore">
-      <p v-if="loadGif" class="page-infinite-loading">
-          加载中...
-          <mt-spinner type="fading-circle">
-          </mt-spinner>
-      </p>
-      <p v-else>
-        已加载完毕
-      </p>
-    </div>
 
-
-
-
+   <div class="loadingMore">
+     <p v-if="loadGif" class="page-infinite-loading">
+       加载中...
+       <mt-spinner type="fading-circle">
+       </mt-spinner>
+     </p>
+     <p v-else>
+       已加载完毕
+     </p>
    </div>
+ </div>
 
-</div>
+
+
+
+
+
 </template>
 
 <!--<style scoped>-->
@@ -59,8 +58,6 @@
       },
 
     methods: {
-
-
 
       loadMore() {
         this.loading = true;
