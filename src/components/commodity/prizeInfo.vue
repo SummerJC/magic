@@ -31,9 +31,10 @@
 
 </template>
 
-<style scoped>
- @import '../../assets/style/homeAndPrize.css';
+<style lang="scss" type="text/css">
+ @import '../../assets/scss/homeAndPrize.scss';
 </style>
+
 
 <script type="text/babel">
   export default {
