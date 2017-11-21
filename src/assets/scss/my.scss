@@ -469,3 +469,16 @@
     text-align: center;
   }
 }
+
+.icon-minus{
+  background: url(../../assets/images/add.png);
+}
+.icon-minus-forbid{
+  background: url(../../assets/images/add.png) 0 0 no-repeat #f5f3f3;
+}
+.icon-add{
+  background: url(../../assets/images/minus.png);
+}
+.icon-add-forbid{
+  background: url(../../assets/images/minus.png) 0 0 no-repeat #f5f3f3;
+}

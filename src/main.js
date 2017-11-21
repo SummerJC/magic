@@ -10,7 +10,9 @@ import 'mint-ui/lib/style.css';
 import http from './utils/axios'
 import api from './utils/api'
 import VueWechatTitle from 'vue-wechat-title';
-import'../src/assets/scss/my.scss'
+import'../src/assets/scss/homeAndPrize.scss';
+import'../src/assets/scss/my.scss';
+
 import { InfiniteScroll } from 'mint-ui';
 Vue.use(InfiniteScroll);
 
