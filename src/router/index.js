@@ -11,6 +11,7 @@ const exchangeSuccess = r => require.ensure([], () => r(require('../components/c
 const activityRules = r => require.ensure([], () => r(require('../components/other/activityRules')), 'activityRules')
 const accountBinding = r => require.ensure([], () => r(require('../components/other/accountBinding')), 'accountBinding')
 
+
 Vue.use(Router)
 
 export default new Router({
@@ -27,6 +28,7 @@ export default new Router({
     {path: '/commodity/exchangeSuccess',component: exchangeSuccess,meta: {title:'兑换商品'}},//兑换成功
     {path: '/other/activityRules',component: activityRules,meta: {title:'活动规则'}},//活动规则
     {path: '/other/accountBinding',component: accountBinding,meta: {title:'账号绑定'}},//账号绑定
+    
  
   ]
 })
