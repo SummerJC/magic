@@ -276,6 +276,7 @@
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     margin-left: 15px;
+
   }
   .list_s p{
     color: #ffffff;
@@ -300,8 +301,17 @@
     float: left;
     background: #ffffff;
     width:calc(100% - 30px);
-    margin-left: 15px;
+    margin: 0 0 5px 15px;
+
     overflow: hidden;
+
+  }
+
+  .loadingMore{
+    text-align: center;
+    float: left;
+    margin-left: 140px;
+
   }
   .l_ot{
     padding-top: 18px;
@@ -398,6 +408,13 @@
     margin: 25px 20px 0 0;
     font-size: 13px;
     color: #999999;
+  }
+
+
+  .loadingMore{
+    text-align: center;
+    float: left;
+    margin-left: 140px;
 
   }
 }
@@ -406,17 +423,17 @@
 //兑换记录
 
 .exchangContent{
-    html body{
-    background: #fe5050;
-  }
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      background: #fe5050;
   .record{
     width: calc(100% - 30px);
     background: #ffffff;
     margin: 15px 0 78px 15px;
     border-radius: 8px;
     height:auto;
-
-
+    overflow: hidden;
   }
   .record_on{
     width: 100%;
@@ -469,4 +486,142 @@
     color: #ffffff;
     text-align: center;
   }
+}
+
+
+
+.prizeInfoContent{
+    background-color: #f2f2f2;
+
+    header{
+        img{
+            width: 100%;
+        }
+    }
+    .goodsInfo{
+        background-color: #fff;
+        line-height: 25px;
+        width:100%;
+        height: auto;
+        padding:10px;
+        overflow: hidden;
+
+        p{
+            font-size: 15px;
+            color: #222;
+
+            span{
+                float: left;
+                font-size: 12px;
+                color: #999;
+            }
+            span:first-child{
+                color: #fe5050;
+                font-size: 15px;
+            }
+            span:nth-child(2){
+                margin-left: 15px;
+                text-decoration: line-through;
+            }
+            span:last-child{
+                float: right;
+            }
+        }
+    }
+    article{
+        background-color: #fff;
+        margin-top: 15px;
+        font-size: 13px;
+        color: #222;
+        line-height: 25px;
+        text-indent: 15px;
+        text-align: justify;
+        margin-bottom: 70px;
+
+        img{
+            width: 100%;
+        }
+    }
+    .bottomArea{
+        width: 100%;
+        padding:0px 10px 0px 15px;
+        height:70px;
+        position: fixed;
+        bottom:0px;
+        background-color: #fff;
+        z-index: 100;
+        font-size: 11px;
+        color: #222;
+
+        p{
+            margin-top: 5px;
+
+            span:last-child{
+                float: right;
+                margin-right: 15px;
+            }
+        }
+        button{
+            float: right;
+            margin-right:10px;
+            width: 140px;
+            height: 40px;
+            color: #fff;
+            background: #fe5050;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+        .btn-numbox {
+            overflow: hidden;
+            background:#fff;
+            margin-top: 10px;
+            float: left;
+            .count{
+                border-radius: 3px;
+                overflow: hidden;
+                .input-num {
+                    width: 50px;
+                    height: 30px;
+                    color: #333;
+                    border-left: 0;
+                    border-right: 0;
+                }
+                .num-add,
+                .input-num,
+                .num-minus{
+                    display: inline-block;
+                    width: 30px;
+                    height:30px;
+                    line-height: 30px;
+                    text-align: center;
+                    font-size: 15px;
+                    color: #999;
+                    cursor: pointer;
+                    border: 1px solid #e6e6e6;
+                }
+            }
+            li {
+                float: left;
+            }
+             .number,.kucun {
+                display: inline-block;
+                font-size: 14px;
+                color: #666666;
+                vertical-align: sub;
+            }
+
+//          .icon-minus{
+//              background: url(../../images/add.png);
+//          }
+//          .icon-minus-forbid{
+//              background: url(../../images/add.png) 0 0 no-repeat #f5f3f3;
+//          }
+//          .icon-add{
+//              background: url(../../images/minus.png);
+//          }
+//          .icon-add-forbid{
+//              background: url(../../images/minus.png) 0 0 no-repeat #f5f3f3;
+//          }
+        }
+    }
 }

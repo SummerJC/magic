@@ -10,7 +10,7 @@
 				<div class="partake_article">1,潍坊人士认为玩玩儿玩儿<span class="partake_title">违法认为台湾前儿童为前提请问提问其他为期二天请问</span>按时大SD案说法ASFA爱双酚AS</div>
 				<div class="partake_article">1,潍坊人士认为玩玩儿玩儿<span class="partake_title">违法认为台湾前儿童为前提请问提问其他为期二天请问</span>按时大SD案说法ASFA爱双酚AS</div>
 				<div class="Activity_points">获取积分逻辑</div>
-				<div class="Activity_img"><img src="../../../static/image/rule.png"></div>
+				<div class="Activity_img"><img src="../../assets/images/rule.png"></div>
 				<div class="Activity_remind">特别提醒</div>
 				<div class="partake_article2">1,潍坊人士认为玩玩儿玩儿<span class="partake_title2">违法认为台湾前儿童为前提请问提问其他为期二天请问</span>按时大SD案说法ASFA爱双酚AS</div>
 				

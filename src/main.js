@@ -9,7 +9,9 @@ import 'vue-ydui/dist/ydui.rem.css';
 import 'mint-ui/lib/style.css';
 import'../src/assets/scss/my.scss'
 import VueWechatTitle from 'vue-wechat-title';
+
 import'../src/assets/scss/my.scss'
+
 import { InfiniteScroll } from 'mint-ui';
 Vue.use(InfiniteScroll);
 

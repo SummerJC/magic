@@ -100,7 +100,7 @@ button{	border-style: none;}
 			p:nth-child(1){
 				width: 100%;
 				text-overflow: ellipsis;
-				white-space:nowrap; 
+				white-space:nowrap;
 				overflow: hidden;
 
 			}
@@ -205,7 +205,7 @@ button{	border-style: none;}
 		}
 		.btn-numbox {
 		    overflow: hidden;
-		    background:#fff; 
+		    background:#fff;
 		    margin-top: 10px;
 		    float: left;
 		    .count{
@@ -241,19 +241,19 @@ button{	border-style: none;}
 			    color: #666666;
 			    vertical-align: sub;
 			}
-			
-			.icon-minus{
-				background: url(/../src/assets/images/add.png);
-			}
-			.icon-minus-forbid{
-				background: url(/../assets/images/add.png) 0 0 no-repeat #f5f3f3;
-			}
-			.icon-add{
-				background: url(/../assets/images/minus.png);
-			}
-			.icon-add-forbid{
-				background: url(/../assets/images/minus.png) 0 0 no-repeat #f5f3f3;
-			}
+
+			//.icon-minus{
+			//	background: url(../../assets/images/add.png);
+			//}
+			//.icon-minus-forbid{
+			//	background: url(../../assets/images/add.png) 0 0 no-repeat #f5f3f3;
+			//}
+			//.icon-add{
+			//	background: url(../../assets/images/minus.png);
+			//}
+			//.icon-add-forbid{
+			//	background: url(../../assets/images/minus.png) 0 0 no-repeat #f5f3f3;
+			//}
 		}
 	}
 }
