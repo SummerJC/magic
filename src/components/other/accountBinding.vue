@@ -18,7 +18,7 @@
         </div>
         
     </div>
-    <div class="New_user">新用户将自动注册,并视为同意<a href=""><<用户注册协议>></a></div>
+    <div class="New_user">新用户将自动注册,并视为同意<a href="http://www.baidu.com"><<用户注册协议>></a></div>
     <button type="button" class="new_sure" v-on:click="bindNumber">确定</button>
     <div id="bind_success">绑定成功</div>
     </div>
