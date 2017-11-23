@@ -19,7 +19,7 @@
               <li>
                   <ul class="count">
                       <li> <span :class="['num-add', inputNum > 1 ? 'icon-add':'icon-add-forbid']" @click='minusNum'></span> </li>
-                      <li><input type="text" class="input-num" v-model="inputNum" @input='changeNum()'/></li>
+                      <li><input type="text" class="input-num" v-model="inputNum" readonly="readonly"/></li>
                       <li @click="addNum()"><span  :class="['num-minus',canAdd?'icon-minus':'icon-minus-forbid']" ></span></li>
 
                   </ul>
@@ -54,7 +54,8 @@
 
     },
     methods: {
-      changeNum(){
+      /*将数量的输入框设置为只读*/
+      /*changeNum(){
         var inputNum = parseInt(this.inputNum)||0;
           if(inputNum*this.integral > this.totalIntegral ||inputNum>this.inventory){
               this.inputNum = 1;
@@ -64,7 +65,7 @@
           }else{
              this.canAdd = true;
           }
-      },
+      },*/
       minusNum(){
         var inputNum = parseInt(this.inputNum);
         if(inputNum>1){
