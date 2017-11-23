@@ -130,6 +130,19 @@
 }
 //个人中心
 .perCenter{
+  .popup{
+     background: none;
+     width: calc(100% - 80px)
+    }
+  .popup img{
+    width: 100%;
+  }
+   .message{
+    font-size: 13px;
+    color: #fff;
+    text-align: center;
+    margin-top: 15px;
+  }
 .MyCentent{
   z-index: 10;
   width: 100%;
