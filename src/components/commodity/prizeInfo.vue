@@ -23,8 +23,7 @@
                       <li><input type="text" class="input-num" v-model="inputNum" @input='changeNum()'/></li>
                       <li @click="addNum()"><span :class="['num-minus',canAdd?'icon-minus':'icon-minus-forbid']" ></span></li>
 
-                      <li><input type="text" class="input-num" v-model="inputNum" readonly="readonly"/></li>
-                      <li @click="addNum()"><span  :class="['num-minus',canAdd?'icon-minus':'icon-minus-forbid']" ></span></li>
+
 
 
                   </ul>
