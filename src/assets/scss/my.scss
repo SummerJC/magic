@@ -1,12 +1,25 @@
 @charset "utf-8";
 
-//今日积分榜
 
+
+
+//今日积分榜
 .integContent{
     width: 100%;
     height: 100%;
     background: #fe5050;
+  overflow: hidden;
 
+  .page-infinite-loading{
+    color: #fff;
+    text-align: center;
+  }
+  .mint-spinner-fading-circle-circle::before{
+    background-color:#fff !important;
+  }
+  .mint-spinner-fading-circle{
+    margin: 0 auto;
+  }
   .first{
     height: 62px;
   }
@@ -94,12 +107,11 @@
 
   .one_l{
     float: left;
-    background: #ffb400;
     font-size: 13px;
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    color: #ffffff;
+    color: #222222;
     text-align: center;
     line-height: 20px;
     margin: 25px 15px 25px 15px;
@@ -119,6 +131,7 @@
     width: 100px;
     text-overflow: ellipsis;
     overflow: hidden;
+    white-space: nowrap;
   }
   .one_ff span{
     float: right;
@@ -142,6 +155,15 @@
     color: #fff;
     text-align: center;
     margin-top: 15px;
+  }
+  .page-infinite-loading{
+      color: #fff;
+    }
+  .mint-spinner-fading-circle-circle::before{
+    background-color:#fff !important;
+  }
+  .mint-spinner-fading-circle{
+    margin: 0 auto;
   }
 .MyCentent{
   z-index: 10;
@@ -299,6 +321,7 @@
     width: 120px;
     overflow: hidden;
     text-overflow: ellipsis;
+    white-space: nowrap;
   }
   .l_ot p{
     font-size: 13px;
@@ -378,6 +401,7 @@
     width: 120px;
     overflow: hidden;
     text-overflow: ellipsis;
+    white-space: nowrap;
   }
   .h_one  p{
     font-size: 13px;
@@ -409,14 +433,34 @@
       width: 100%;
       height: 100%;
       background: #fe5050;
+  .loadingMore{
+    text-align: center;
+  }
+  .page-infinite-loading{
+    color: #fff;
+  }
+  .mint-spinner-fading-circle-circle::before{
+    background-color:#fff !important;
+  }
+  .mint-spinner-fading-circle{
+    margin: 0 auto;
+  }
+  .records{
+    width:100%;
+    height:auto;
+    overflow: hidden;
+    padding-bottom: 76px;
+  }
   .record{
     width: calc(100% - 30px);
     background: #ffffff;
-    margin: 15px 0 78px 15px;
+    margin: 15px 0 10px 15px;
     border-radius: 8px;
     height:auto;
     overflow: hidden;
   }
+
+
   .record_on{
     width: 100%;
     height: 110px;
@@ -436,14 +480,21 @@
     margin: 15px;
   }
   .record_m span{
-    width: 178px;
+    width: calc(70% - 30px);
     display: inline-block;
     margin: 16px 0 10px 0;
     font-size: 14px;
     color: #222222;
+    line-height: 12px;
+    //display: -webkit-box;
+    //-webkit-box-orient: vertical;
+    //-webkit-line-clamp: 3;
+    //overflow: hidden;
     overflow: hidden;
     text-overflow: ellipsis;
+    white-space: nowrap;
   }
+
     .record_con li{
       font-size: 13px;
       color: #666666;
@@ -462,7 +513,7 @@
   .foot span{
     display: block;
     width: calc(100% - 30px);
-    margin: 0 0 0 10px;
+    margin: 0 0 0 13px;
     line-height: 70px;
     font-size: 15px;
     color: #ffffff;

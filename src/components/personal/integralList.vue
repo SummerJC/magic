@@ -23,9 +23,7 @@
         </div>
       </div>
 
-      <div class="h_list"  v-infinite-scroll="loadMore"
-           infinite-scroll-disabled="loading"
-         infinite-scroll-distance="deCheck">
+      <div class="h_list">
           <div class="list_one"  v-for="item in 10">
               <div class="one_l">
                   <span>{{item}}</span>
@@ -38,15 +36,40 @@
             </div>
             <div class="one_ff">
               <span>25.5分</span>
-
             </div>
           </div>
+
       </div>
+      <div class="loadingMore">
+        <p v-if="loadGif" class="page-infinite-loading">
+          加载中...
+          <mt-spinner type="fading-circle">
+          </mt-spinner>
+        </p>
+        <p v-else>
+          已加载完毕
+        </p>
+      </div>
+
+
     </div>
 </template>
 
 <style scoped>
+.h_list .list_one:nth-child(1) .one_l{
+    background: #ffb400;
+    color: white;
+  }
 
+.h_list .list_one:nth-child(2) .one_l{
+  background: #92beeb;
+  color: white;
+}
+
+.h_list .list_one:nth-child(3) .one_l{
+  background: #d79976;
+  color: white;
+}
 </style>
 
 <script type="text/babel">
@@ -58,24 +81,31 @@
     data() {
       return{
         list:[],
-        col:["#ffb400","#92beeb","#d79976"],
-        deCheck:"10"
+//        col:["#ffb400","#92beeb","#d79976"],
+        deCheck:"10",
+        showLoading:true,
+        loadGif:true,
+        loading:false
       }
     },
 
+
     methods: {
       loadMore() {
-        var that = this;
-        that.loading = true;
+        this.loading = true;
+        this.loadGif = true;
         setTimeout(() => {
-          let last = this.list[that.list.length - 1];
+          this.loadGif = false;
+          let last = this.list[this.list.length - 1];
           for (let i = 1; i <= 10; i++) {
-            that.list.push(last + i);
-
+            this.list.push(last + i);
           }
-          that.loading = false;
-        }, 2500);
-      }
+          this.loading = false;
+        }, 1000);
+      },
+
+
+
     },
     watch: {
 

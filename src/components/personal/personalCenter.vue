@@ -106,7 +106,7 @@ import HistoryList from '../../components/personal/historyList'
          list:["1","2","3"],
          ownerImg:'',
          popupVisible:false,
-		 showLoading:true,
+		     showLoading:true,
          loadGif:true,
          loading:false
 
