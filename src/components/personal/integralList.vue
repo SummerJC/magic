@@ -56,6 +56,7 @@
 </template>
 
 <style scoped>
+  /*前三名的样式*/
 .h_list .list_one:nth-child(1) .one_l{
     background: #ffb400;
     color: white;

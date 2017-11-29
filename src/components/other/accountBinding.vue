@@ -24,9 +24,8 @@
     </div>
 
 </template>
-<style type="text/css">
-  @import '../../assets/style/other.css';
-
+<style lang="scss" type="text/css">
+  @import '../../assets/scss/rulebinding.scss';
 </style>
 <script>
 
