@@ -107,8 +107,10 @@ import '../../assets/html2canvas.js'
          Myref:"吴胜",
          list:["1","2","3"],
          ownerImg:'',
-         popupVisible:false
-
+         popupVisible:false,
+		     showLoading:true,
+         loadGif:true,
+         loading:false
 
        }
       },

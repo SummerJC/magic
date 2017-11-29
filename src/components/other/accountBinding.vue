@@ -1,22 +1,22 @@
 <template>
 	<div class="content_Binding">
-    
+
         <!-- <div class="cell-left">手机号：</div> -->
         <div class="content_BindingPhone"><input type="number" pattern="[0-9]*" placeholder="请输入您的魔法现在注册手机号码" autocomplete="off" v-model="phoneNum"/></div>
-   
+
      <div class="getcontent_BindingPhone">
         <!-- <div class="cell-left">验证码：</div> -->
-        
+
          <input type="number" placeholder="请输入短信验证码" autocomplete="off" v-model="code"/>
         	<div v-on:click="getVcode" class="getcontent_BindingPhone2">
             <button v-show="show" type="button">
-            <span >获取验证码</span>  
+            <span >获取验证码</span>
           </button>
         	<button v-show="!show" type="button">
          		<span  class="count">{{count}} s  后重新获取</span>
         	</button>
         </div>
-        
+
     </div>
     <div class="New_user">新用户将自动注册,并视为同意<a href="http://www.baidu.com"><<用户注册协议>></a></div>
     <button type="button" class="new_sure" v-on:click="bindNumber">确定</button>
@@ -26,11 +26,11 @@
 </template>
 <style type="text/css">
   @import '../../assets/style/other.css';
-  
+
 </style>
 <script>
 
- 
+
 // import http from '../utils/axios'
 // import api from '../utils/api'
 import { Toast } from 'mint-ui'
@@ -41,7 +41,7 @@ export default {
 	},
   created() {
       document.title = '绑定手机号'
-      
+
       console.log(this.phoneNum)
     },
 	data(){
@@ -94,7 +94,7 @@ export default {
             var bind_success=document.getElementById('bind_success');
                 bind_success.display=='block';
                 setTimeout("function (){ this.$router.push({path: '/'});}", 2000);
-           
+
          }else{
 
             this.alertMessage(res.data.message);

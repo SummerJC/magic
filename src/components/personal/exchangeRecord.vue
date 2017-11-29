@@ -1,13 +1,13 @@
 <<template>
     <div class="exchangContent">
 
-
+    <div class="records">
       <div class="record">
-       <div>
+
           <div class="record_on"  v-for="item in list">
             <img src="../../assets/images/Magic.jpg" />
             <div class="record_m">
-                <span>魔法币200个</span>
+                <span>奖品名称:{{prize}}</span>
             </div>
               <ul class="record_con">
                 <li>兑换数量:2</li>
@@ -16,14 +16,26 @@
               </ul>
           </div>
 
-
-       </div>
       </div>
+
+      <div class="loadingMore">
+        <p v-if="loadGif" class="page-infinite-loading">
+          加载中...
+          <mt-spinner type="fading-circle">
+          </mt-spinner>
+        </p>
+        <p v-else>
+          已加载完毕
+        </p>
+      </div>
+    </div>
           <div class="foot_v">
             <div class="foot">
               <span>下载魔法现金APP ，现金借款不用愁</span>
             </div>
           </div>
+
+
     </div>
 </template>
 
@@ -40,25 +52,27 @@
     name: 'hello1',
     data() {
       return{
-          list:["1","2","3","4","5"],
+        list:["1","2","3","4","5"],
+        prize:"",
+        showLoading:true,
+        loadGif:true,
         loading:false
-
       }
     },
 
     methods: {
       loadMore() {
-      var that = this;
-        that.loading = true;
+        this.loading = true;
+        this.loadGif = true;
         setTimeout(() => {
-          let last = this.list[that.list.length - 1];
+          this.loadGif = false;
+          let last = this.list[this.list.length - 1];
           for (let i = 1; i <= 10; i++) {
-            that.list.push(last + i);
+            this.list.push(last + i);
           }
-          that.loading = false;
-        }, 2500);
-
-      },
+          this.loading = false;
+        }, 1000);
+      }
     },
     watch: {
 
