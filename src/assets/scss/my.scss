@@ -8,7 +8,7 @@
     width: 100%;
     height: 100%;
     background: #fe5050;
-  overflow: hidden;
+    overflow: hidden;
 
   .page-infinite-loading{
     color: #fff;
@@ -24,7 +24,7 @@
     height: 62px;
   }
 
-  .list_one:last-child{
+  .champion_one:last-child{
     border-bottom: none;
   }
   .first span{
@@ -47,7 +47,7 @@
     margin-left: 30px;
     display: block;
   }
-  .h_one{
+  .my_ranking{
     height: 70px;
     background: #ffffff;
     width:calc(100% - 30px);
@@ -55,57 +55,57 @@
     margin-left: 15px;
     border-radius: 6px;
   }
-  .h_one img{
+  .my_ranking img{
     height:40px;
     width:40px;
     float: left;
     display: block;
     margin: 15px 10px 15px 15px;
   }
-  .h_to {
+  .my_namedate {
     padding-top: 18px;
     float: left;
   }
 
-  .h_to span{
+  .my_namedate span{
     font-size: 15px;
     color: #222222;
     width: 120px;
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  .h_one  p{
+  .my_ranking  p{
     font-size: 13px;
     color: #999999;
     padding-top: 6px;
   }
-  .h_f span{
+  .my_grade span{
     float:right;
     margin: 25px 20px 0 0;
     font-size: 13px;
     color: #999999;
   }
-  .h_num span{
+  .ranking span{
     float: left;
     line-height: 70px;
     margin:  0 0 0 20px;
     font-size: 13px;
   }
 
-  .h_list{
+  .history_champion{
     width:calc(100% - 30px);
     margin:  10px 0 15px 15px;
     border-radius: 6px;
     background: #ffffff;
   }
 
-  .list_one{
+  .champion_one{
     width: 100%;
     border-bottom: 1px solid #ededed;
     height: 70px;
   }
 
-  .one_l{
+  .history_one{
     float: left;
     font-size: 13px;
     width: 20px;
@@ -117,13 +117,13 @@
     margin: 25px 15px 25px 15px;
   }
 
-  .one_in img{
+  .one_head img{
     width: 40px;
     height: 40px;
     float: left;
     margin: 15px 15px 15px 0;
   }
-  .one_m p{
+  .one_name p{
     float: left;
     line-height: 70px;
     font-size: 15px;
@@ -133,7 +133,7 @@
     overflow: hidden;
     white-space: nowrap;
   }
-  .one_ff span{
+  .one_integral span{
     float: right;
     font-size: 13px;
     color: #666666;
@@ -229,17 +229,17 @@
     font-size: 14px;
     color: white;
   }
- .nf{
+ .My_friends{
     width:100%;
     height:200px;
     padding-top: 130px;
    margin: 0 0 45px 15px;
   }
-.nf li{
+.My_friends li{
   font-size: 13px;
   color: white;
 }
-  .nf .nf_jian{
+  .My_friends .indirect_friends{
     margin: 10px 0;
   }
   .banner_rule span{
@@ -283,13 +283,13 @@
     color: white;
     font-size: 15px;
   }
-  .List{
+  .List_friends{
     width:100%;
     height:auto;
     overflow: hidden;
     padding-bottom: 86px;
   }
-  .list_s{
+  .friends_recom{
     width:calc(100% - 30px);
     height: 40px;
     background: #a046fe;
@@ -300,26 +300,26 @@
     margin-left: 15px;
 
   }
-  .list_s p{
+  .friends_recom p{
     color: #ffffff;
      font-size: 15px;
     text-align: center;
     line-height: 40px;
   }
-  .l_one{
+  .Direct{
     height: 70px;
    width:calc(100% - 30px);
     border-bottom:1px solid #ededed;
     margin-left: 15px;
   }
-  .l_one img{
+  .Direct img{
     height:40px;
     width:40px;
     float: left;
     display: block;
     margin: 15px 10px 15px 0px;
   }
-  .list_l{
+  .friends_Direct{
     float: left;
     background: #ffffff;
     width:calc(100% - 30px);
@@ -335,11 +335,11 @@
     margin-left: 140px;
 
   }
-  .l_ot{
+  .Direct_namedate{
     padding-top: 18px;
     float: left;
   }
-  .l_ot span{
+  .Direct_namedate span{
     display: block;
     font-size: 15px;
     color: #222222;
@@ -348,12 +348,12 @@
     text-overflow: ellipsis;
     white-space: nowrap;
   }
-  .l_ot p{
-    font-size: 13px;
+  .Direct_namedate p{
+    font-size: 13px;    
     color: #999999;
     padding-top: 6px;
   }
-  .l_f{
+  .indirect_friend{
     float:right;
     margin: 25px 0 0 0;
     font-size: 13px;
@@ -397,30 +397,30 @@
     .mint-spinner-fading-circle{
       margin: 0 auto;
     }
-  .h_content{
+  .history_champions{
     background: #ffffff;
     width:calc(100% - 30px);
     border-radius: 8px;
     margin: 15px 0 0 15px;
   }
-  .h_one{
+  .champions_record{
     height: 70px;
     border-bottom: 1px solid #ededed;
     margin: 0 0 15px 0;
   }
-  .h_one img{
+  .champions_record img{
     height:40px;
     width:40px;
     float: left;
     display: block;
     margin: 15px 10px 15px 15px;
   }
-  .h_to {
+  .champions_namedate {
     padding-top: 18px;
     float: left;
   }
 
-  .h_to span{
+  .champions_namedate span{
     font-size: 15px;
     color: #222222;
     width: 120px;
@@ -428,15 +428,15 @@
     text-overflow: ellipsis;
     white-space: nowrap;
   }
-  .h_one  p{
+  .champions_record  p{
     font-size: 13px;
     color: #999999;
     padding-top: 6px;
   }
-  .h_one:last-child{
+  .champions_record:last-child{
     border-bottom: none;
   }
-   .h_f span{
+   .champions_integral span{
     float:right;
     margin: 25px 20px 0 0;
     font-size: 13px;

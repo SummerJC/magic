@@ -9,32 +9,32 @@
         </router-link>
       </div>
 
-      <div class="h_one">
-        <div class="h_num">
+      <div class="my_ranking">
+        <div class="ranking">
           <span>32</span>
         </div>
         <img src="../../assets/images/ava72.png" />
-        <div class="h_to">
+        <div class="my_namedate">
           <span>金莫颉</span>
           <p>2017.11.15</p>
         </div>
-        <div class="h_f">
+        <div class="my_grade">
           <span>100分</span>
         </div>
       </div>
 
-      <div class="h_list">
-          <div class="list_one"  v-for="item in 10">
-              <div class="one_l">
+      <div class="history_champion">
+          <div class="champion_one"  v-for="item in 10">
+              <div class="history_one">
                   <span>{{item}}</span>
               </div>
-            <div class="one_in">
+            <div class="one_head">
               <img src="../../assets/images/ava72.png" />
             </div>
-            <div class="one_m">
+            <div class="one_name">
               <p>吴二傻</p>
             </div>
-            <div class="one_ff">
+            <div class="one_integral">
               <span>25.5分</span>
             </div>
           </div>
@@ -57,17 +57,17 @@
 
 <style scoped>
   /*前三名的样式*/
-.h_list .list_one:nth-child(1) .one_l{
+.history_champion .champion_one:nth-child(1) .history_one{
     background: #ffb400;
     color: white;
   }
 
-.h_list .list_one:nth-child(2) .one_l{
+.history_champion .champion_one:nth-child(2) .history_one{
   background: #92beeb;
   color: white;
 }
 
-.h_list .list_one:nth-child(3) .one_l{
+.history_champion .champion_one:nth-child(3) .history_one{
   background: #d79976;
   color: white;
 }

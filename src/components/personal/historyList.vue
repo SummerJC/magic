@@ -1,15 +1,15 @@
 <template>
  <div class="historyContent">
 
-    <div class="h_content">
-      <div class="h_one"  v-for="item in list">
+    <div class="history_champions">
+      <div class="champions_record"  v-for="item in list">
 
             <img src="../../assets/images/ava72.png" />
-            <div class="h_to">
+            <div class="champions_namedate">
               <span>金莫颉</span>
               <p>2017.11.15</p>
             </div>
-            <div class="h_f">
+            <div class="champions_integral">
               <span>100分</span>
             </div>
 

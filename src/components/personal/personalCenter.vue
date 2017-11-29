@@ -23,9 +23,9 @@
             <p>获得总积分</p>
            </div>
           </div>
-          <ul class="nf">
+          <ul class="My_friends">
               <li>直接推荐好友数 ：{{directNum}}</li>
-              <li class="nf_jian">间接推荐好友数 ： {{indirectNum}}</li>
+              <li class="indirect_friends">间接推荐好友数 ： {{indirectNum}}</li>
               <li>我的推荐人 ： {{Myref}}</li>
           </ul>
           <div class="banner_rule">
@@ -47,21 +47,21 @@
         </router-link>
       </div>
 
-        <div class="List">
-            <div class="list_s">
+        <div class="List_friends">
+            <div class="friends_recom">
                 <p>我的推荐好友</p>
             </div>
 
-            <div class="list_l"  v-infinite-scroll="loadMore"
+            <div class="friends_Direct"  v-infinite-scroll="loadMore"
                  infinite-scroll-disabled="loading"
                  infinite-scroll-distance="10">
-                <div class="l_one"  v-for="item in list">
+                <div class="Direct"  v-for="item in list">
                   <img src="../../assets/images/ava72.png" />
-                  <div class="l_ot">
+                  <div class="Direct_namedate">
                     <span>金莫颉</span>
                     <p>2017.11.15</p>
                   </div>
-                  <div class="l_f">
+                  <div class="indirect_friend">
                     直接好友
                   </div>
                 </div>
