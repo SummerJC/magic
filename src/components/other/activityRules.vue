@@ -25,6 +25,6 @@
 </template>
 
 <style type="text/css">
-  @import '../../assets/style/other.css';
+  @import '../../assets/scss/other.scss';
   
 </style>
