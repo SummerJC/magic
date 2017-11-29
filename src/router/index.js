@@ -18,7 +18,7 @@ export default new Router({
   mode: 'history',
   history: true,
   routes: [
-    {path: '/',component: index,meta: {title:'首页'}},//首页
+    {path: '/',component: index,meta: {title:'邀请好友助力'}},//首页
     {path: '/personal/personalCenter',component: personalCenter,meta: {title:'个人中心'}},//个人中心
     {path: '/personal/historyList',component: historyList,meta: {title:'历史排行榜冠军'}},//历史排行榜记录
     {path: '/personal/integralList',component: integralList,meta: {title:'今日积分排行榜'}},//积分排行榜

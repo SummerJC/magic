@@ -1,6 +1,16 @@
 <template>
-
+  
   <div class="perCenter">
+    <div style="width:100%;height:100%;position:absolute">
+            <div class="shareImg" id='toImg'  style="z-index:0" >
+             <img class="title" src="../../assets/images/word.png">
+              <p>邀请的好友越多，获得积分越多</p>
+              <img src="../../assets/images/sq.gif">
+              <p>我的专属二维码</p>
+              <p>好友点击识别后关注即可获得积分</p>
+            </div>
+            <p class="message">长按二维码可分享我的专属海报</p>
+    </div>
     <div class="MyCentent">
         <div class="banner">
           <div>
@@ -42,7 +52,9 @@
                 <p>我的推荐好友</p>
             </div>
 
-            <div  class="list_l">
+            <div class="list_l"  v-infinite-scroll="loadMore"
+                 infinite-scroll-disabled="loading"
+                 infinite-scroll-distance="10">
                 <div class="l_one"  v-for="item in list">
                   <img src="../../assets/images/ava72.png" />
                   <div class="l_ot">
@@ -54,21 +66,8 @@
                   </div>
                 </div>
             </div>
-          <div class="loadingMore">
-            <p v-if="loadGif" class="page-infinite-loading">
-              加载中...
-              <mt-spinner type="fading-circle">
-              </mt-spinner>
-            </p>
-            <p v-else>
-              已加载完毕
-            </p>
-          </div>
-
 
         </div>
-
-
 
      <footer @click='displayImg'>
         <span >邀请好友得积分</span>
@@ -94,6 +93,9 @@
 
   Vue.use(InfiniteScroll);
 import HistoryList from '../../components/personal/historyList'
+
+import '../../assets/html2canvas.js'
+
   export default {
     name: 'hello2',
     data() {
@@ -113,20 +115,28 @@ import HistoryList from '../../components/personal/historyList'
        }
       },
     mounted() {
-      this.ownerImg = JSON.parse(window.localStorage.getItem('userImg'));
+      this.initImg();
     },
     methods: {
-  loadMore() {
+
+      loadMore() {
         this.loading = true;
-        this.loadGif = true;
         setTimeout(() => {
-           this.loadGif = false;
           let last = this.list[this.list.length - 1];
           for (let i = 1; i <= 10; i++) {
             this.list.push(last + i);
           }
           this.loading = false;
-        }, 1000);
+        }, 2500);
+      },
+      initImg(){
+        var that = this;
+        html2canvas(document.getElementById('toImg'), {
+            onrendered: function(canvas) {
+                var url = canvas.toDataURL("image/png");
+                that.ownerImg = url;
+            },
+        });
       },
       displayImg(){
         this.popupVisible = true;
@@ -138,3 +148,6 @@ import HistoryList from '../../components/personal/historyList'
       },
   }
 </script>
+
+
+

@@ -24,6 +24,8 @@
 	</div>
 </template>
 
+
 <style lang="scss" type="text/css">
   @import '../../assets/scss/rulebinding.scss';
 </style>
+

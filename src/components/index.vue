@@ -49,6 +49,11 @@
         <img :src="ownerImg" >
         <p class="message">长按二维码进行分享</p>
       </mt-popup>
+       <mt-popup
+        v-model="popupVisible1"
+        popup-transition="popup-fade" class="popup" style="color:#fff;font-size:24px;text-align:center">
+        您未关注公众号，正在为你跳转页面....
+      </mt-popup>
   </div>
 </div>
 </template>
@@ -69,9 +74,12 @@ Vue.component(SwipeItem.name, SwipeItem);
        return{
           popupVisible:false,
            ownerImg:'',
+           popupVisible1:false
        }
       },
     mounted() {
+      var url = window.location.href;
+      
      this.ownerImg = JSON.parse(window.localStorage.getItem('userImg'));
      if(!this.ownerImg){
         this.initImg();
@@ -84,7 +92,9 @@ Vue.component(SwipeItem.name, SwipeItem);
         html2canvas(document.getElementById('toImg'), {
             onrendered: function(canvas) {
                 var url = canvas.toDataURL("image/png");
+                that.ownerImg = url;
                 window.localStorage.setItem('userImg',JSON.stringify(url));
+                
             },
         });
       },
