@@ -19,7 +19,6 @@
             <div><img src="../../assets/images/arrows.png"></div>
             <div><img src="../../assets/images/share.png"></div>
           </div>
-           
       </mt-popup>
      
   </div>
