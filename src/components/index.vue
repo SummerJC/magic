@@ -79,11 +79,7 @@ Vue.component(SwipeItem.name, SwipeItem);
       },
     mounted() {
       var url = window.location.href;
-      
-     this.ownerImg = JSON.parse(window.localStorage.getItem('userImg'));
-     if(!this.ownerImg){
-        this.initImg();
-     }
+      this.initImg();
       
     },
     methods: {
@@ -93,7 +89,6 @@ Vue.component(SwipeItem.name, SwipeItem);
             onrendered: function(canvas) {
                 var url = canvas.toDataURL("image/png");
                 that.ownerImg = url;
-                window.localStorage.setItem('userImg',JSON.stringify(url));
                 
             },
         });
