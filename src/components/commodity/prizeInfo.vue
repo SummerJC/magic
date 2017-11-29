@@ -1,5 +1,4 @@
 <template>
-
   <div class="prizeInfoContent">
       <header>
         <img src="../../assets/images/goods.jpg">
@@ -18,14 +17,9 @@
           <ul class="btn-numbox">
               <li>
                   <ul class="count">
-                      <li> <span :class="['num-add', inputNum > 1 ? 'icon-add':'icon-add-forbid']" @click='minusNum'></span> </li>
-
+                      <li><span :class="['num-add', inputNum > 1 ? 'icon-add':'icon-add-forbid']" @click='minusNum'></span></li>
                       <li><input type="text" class="input-num" v-model="inputNum" @input='changeNum()'/></li>
                       <li @click="addNum()"><span :class="['num-minus',canAdd?'icon-minus':'icon-minus-forbid']" ></span></li>
-
-
-
-
                   </ul>
               </li>
   　　　  </ul>
